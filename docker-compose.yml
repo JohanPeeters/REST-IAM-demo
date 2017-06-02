@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:9.6.2-alpine
+    container_name: ${POSTGRES_NAME}
+    ports:
+      - "5432:5432"
+    environment:
+      KC_USER: ${KC_DB_OWNER}
+      KC_PASSWORD: ${KC_DB_OWNER_PWD}
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+      - pg_data:/var/lib/postgresql/data
+  keycloak:
+    build: ./keycloak
+    image: ${KC_TAG}
+    container_name: ${KC_NAME}
+    ports:
+      - "8443:8443"
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_PORT_5432_TCP_ADDR: ${POSTGRES_NAME}
+      POSTGRES_DATABASE: ${KC_DB}
+      POSTGRES_USER: ${KC_DB_OWNER}
+      POSTGRES_PASSWORD: ${KC_DB_OWNER_PWD}
+volumes:
+  pg_data:
