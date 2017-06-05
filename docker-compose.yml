@@ -24,5 +24,10 @@ services:
       POSTGRES_DATABASE: ${KC_DB}
       POSTGRES_USER: ${KC_DB_OWNER}
       POSTGRES_PASSWORD: ${KC_DB_OWNER_PWD}
+  resourceserver:
+      build: ./resourceserver
+      container_name: ${RS_NAME}
+      ports:
+         - "8080:8080"
 volumes:
   pg_data:

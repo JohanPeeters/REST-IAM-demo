@@ -19,6 +19,9 @@ verify:
 stop:
 	@docker-compose stop
 
+spa:
+	@cd client && webpack && webpack-dev-server
+    
 rm: stop
 	@docker-compose rm -f
 
@@ -31,12 +34,14 @@ rm-postgres: stop-postgres
 build:
 	@docker-compose build
 
-run: verify
-	@docker-compose up
+run: 
+	@docker-compose up -d 
+	@make spa
 
-clean-run: verify rm-postgres
+clean-run: rm-postgres 	
 	-@docker volume rm restiamdemonstrator_pg_data
-	@docker-compose up --build
+	@docker-compose up -d --build  
+	@make spa
 
 persist-kc-config:
 	@echo "\c ${KC_DB}" > ./initdb/keycloak.sql
