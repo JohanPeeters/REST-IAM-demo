@@ -21,7 +21,7 @@ stop:
 
 spa:
 	@cd client && webpack && webpack-dev-server
-    
+
 rm: stop
 	@docker-compose rm -f
 
@@ -34,13 +34,12 @@ rm-postgres: stop-postgres
 build:
 	@docker-compose build
 
-run: 
-	@docker-compose up -d 
-	@make spa
+run:
+	@docker-compose up -d
 
-clean-run: rm-postgres 	
-	-@docker volume rm restiamdemonstrator_pg_data
-	@docker-compose up -d --build  
+clean-run: rm-postgres
+	-@docker volume rm restiamdemo_pg_data
+	@docker-compose up -d --build
 	@make spa
 
 persist-kc-config:
@@ -51,7 +50,7 @@ persist-kc-config:
 persist-config: persist-kc-config
 
 node_modules: package.json
-	@npm install
+	@yarn install
 
 test: node_modules
 	@npm test
