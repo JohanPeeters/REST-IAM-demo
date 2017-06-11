@@ -9,7 +9,7 @@ define resolvesToLocal
 endef
 
 define import_file
-	@export PGPASSWORD='$(3)' && psql -h localhost -p 3333 -U $(2) -d postgres < $(1)
+	export PGPASSWORD='$(3)' && psql -h localhost -p 3333 -U $(2) -d postgres < $(1)
 endef
 
 verify:
@@ -54,3 +54,8 @@ node_modules: package.json
 
 test: node_modules
 	@npm test
+
+aws-db-init:
+	$(info Initialises the database)
+	@@ssh -f -o ExitOnForwardFailure=yes -L 3333:keycloak.c7y3d9msb0fs.eu-west-1.rds.amazonaws.com:5432 ec2-user@ec2-52-31-176-41.eu-west-1.compute.amazonaws.com sleep 10
+	$(call import_file,./initdb/keycloak.sql,$(KC_DB_OWNER),$(KC_DB_OWNER_PWD))
