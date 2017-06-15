@@ -36,14 +36,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -1492,35 +1492,35 @@ INSERT INTO authentication_execution VALUES ('6f19a174-08b5-40d2-b4dc-54d76e4251
 INSERT INTO authentication_execution VALUES ('f9da4b42-b97e-4f96-bd23-d5f640ccfd8b', NULL, 'idp-username-password-form', 'master', '29819766-56af-4842-bf6f-dbc1f03065fc', 0, 10, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('42c4417b-95a4-402a-a4a6-2b1f0fa7c192', NULL, 'auth-otp-form', 'master', '29819766-56af-4842-bf6f-dbc1f03065fc', 1, 20, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('5b74ce55-6308-4d8e-8f8d-366285a3518d', NULL, 'http-basic-authenticator', 'master', '123778c0-7127-4a6d-a282-eb9d0f15633b', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('a0e12503-a760-4745-9088-0d9620c61b21', NULL, 'idp-confirm-link', 'Aldi', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('26652a83-10b1-414c-9fe4-cfca8b461e6b', NULL, 'idp-email-verification', 'Aldi', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 2, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('ddc11807-1339-4075-90d6-ec9eb21f7e78', NULL, NULL, 'Aldi', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 2, 30, true, 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', NULL);
-INSERT INTO authentication_execution VALUES ('8024de0e-6f92-4214-bd4f-6423d8d4d350', NULL, 'idp-username-password-form', 'Aldi', 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('46fa7cd1-d222-4568-88e3-a218fcc22873', NULL, 'auth-otp-form', 'Aldi', 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 1, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('ff36b463-f507-481c-9bdc-ff28b112837e', NULL, 'auth-cookie', 'Aldi', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('fb43521e-4697-4dca-a17d-9384b80d6885', NULL, 'auth-spnego', 'Aldi', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 3, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('17b83f5c-7636-48f1-b5d8-93f5b3767041', NULL, 'identity-provider-redirector', 'Aldi', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 25, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('5a1ff62f-2e45-4ace-b5d0-97128d52d660', NULL, NULL, 'Aldi', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 30, true, 'd0266fc6-2e98-4896-be6a-8b58274582c7', NULL);
-INSERT INTO authentication_execution VALUES ('6178d248-6bba-4d83-a093-7b8e47da5111', NULL, 'client-secret', 'Aldi', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('c2319599-c1b1-4f21-818b-20c9a0ef1bf1', NULL, 'client-jwt', 'Aldi', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('f8e12007-2570-4e14-80a7-6214cebe8001', NULL, 'direct-grant-validate-username', 'Aldi', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('a18e14e9-88ae-45e8-9634-6ed268bc72bb', NULL, 'direct-grant-validate-password', 'Aldi', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('2d903c1f-a9fc-47ca-b716-af27cdab45a2', NULL, 'direct-grant-validate-otp', 'Aldi', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 1, 30, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('e89bcf59-e819-499e-82a2-6ff534fd73fd', NULL, 'idp-review-profile', 'Aldi', '40c54f9a-e896-4fdd-af05-61933da0205e', 0, 10, false, NULL, '1e248c12-3b2b-4b19-a235-21f9dd35b135');
-INSERT INTO authentication_execution VALUES ('15cce287-6536-4f4a-bf02-34a2bfa094c5', NULL, 'idp-create-user-if-unique', 'Aldi', '40c54f9a-e896-4fdd-af05-61933da0205e', 2, 20, false, NULL, '9b0d8966-bf5d-42a5-86af-5b89654fac39');
-INSERT INTO authentication_execution VALUES ('74ad7922-a7fc-4b3f-b307-bf07fe83d105', NULL, NULL, 'Aldi', '40c54f9a-e896-4fdd-af05-61933da0205e', 2, 30, true, '007ec7e0-829c-42b2-9e46-327bd34eb0f8', NULL);
-INSERT INTO authentication_execution VALUES ('2a54902a-16e8-4c3a-ac84-b4a0752d5153', NULL, 'auth-username-password-form', 'Aldi', 'd0266fc6-2e98-4896-be6a-8b58274582c7', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('186c6fad-5544-4633-bb62-ecf7a31aa5a0', NULL, 'auth-otp-form', 'Aldi', 'd0266fc6-2e98-4896-be6a-8b58274582c7', 1, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('85635584-127e-4e6d-89ad-b44d2fdbacce', NULL, 'registration-page-form', 'Aldi', '1592898e-e256-40cf-8117-bf08a175cd11', 0, 10, true, 'b8077afa-0c21-40a0-b057-d67066d6df48', NULL);
-INSERT INTO authentication_execution VALUES ('4e27f4f2-3174-4c3b-9507-8aa5e5b9efeb', NULL, 'registration-user-creation', 'Aldi', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('89d82860-a2a7-4358-be08-ca77b3629985', NULL, 'registration-profile-action', 'Aldi', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 40, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('1b313df5-18e3-4515-8c54-8bf45c474a32', NULL, 'registration-password-action', 'Aldi', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 50, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('5fcb9a79-c373-4906-ba4e-249823fe08ec', NULL, 'registration-recaptcha-action', 'Aldi', 'b8077afa-0c21-40a0-b057-d67066d6df48', 3, 60, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('395af642-f1c9-406c-98c4-86d84bf261e3', NULL, 'reset-credentials-choose-user', 'Aldi', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('08af577f-e8d2-4326-bca3-80ad18b16626', NULL, 'reset-credential-email', 'Aldi', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('fbf96bbd-a433-4d5b-a0ac-b4013afa14a7', NULL, 'reset-password', 'Aldi', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 30, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('13dd3d87-e5ac-43b4-ad35-48f0f7c18767', NULL, 'reset-otp', 'Aldi', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 1, 40, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('f331d71c-29df-410c-be16-fc6cf0c661c2', NULL, 'http-basic-authenticator', 'Aldi', 'a0e15855-00af-4e02-965d-9fdeafcaf6cf', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('a0e12503-a760-4745-9088-0d9620c61b21', NULL, 'idp-confirm-link', 'Joyn', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('26652a83-10b1-414c-9fe4-cfca8b461e6b', NULL, 'idp-email-verification', 'Joyn', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 2, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('ddc11807-1339-4075-90d6-ec9eb21f7e78', NULL, NULL, 'Joyn', '007ec7e0-829c-42b2-9e46-327bd34eb0f8', 2, 30, true, 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', NULL);
+INSERT INTO authentication_execution VALUES ('8024de0e-6f92-4214-bd4f-6423d8d4d350', NULL, 'idp-username-password-form', 'Joyn', 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('46fa7cd1-d222-4568-88e3-a218fcc22873', NULL, 'auth-otp-form', 'Joyn', 'fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 1, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('ff36b463-f507-481c-9bdc-ff28b112837e', NULL, 'auth-cookie', 'Joyn', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('fb43521e-4697-4dca-a17d-9384b80d6885', NULL, 'auth-spnego', 'Joyn', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 3, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('17b83f5c-7636-48f1-b5d8-93f5b3767041', NULL, 'identity-provider-redirector', 'Joyn', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 25, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('5a1ff62f-2e45-4ace-b5d0-97128d52d660', NULL, NULL, 'Joyn', 'dde585ff-0e30-4a14-af37-d6fad287fd26', 2, 30, true, 'd0266fc6-2e98-4896-be6a-8b58274582c7', NULL);
+INSERT INTO authentication_execution VALUES ('6178d248-6bba-4d83-a093-7b8e47da5111', NULL, 'client-secret', 'Joyn', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('c2319599-c1b1-4f21-818b-20c9a0ef1bf1', NULL, 'client-jwt', 'Joyn', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('f8e12007-2570-4e14-80a7-6214cebe8001', NULL, 'direct-grant-validate-username', 'Joyn', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('a18e14e9-88ae-45e8-9634-6ed268bc72bb', NULL, 'direct-grant-validate-password', 'Joyn', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('2d903c1f-a9fc-47ca-b716-af27cdab45a2', NULL, 'direct-grant-validate-otp', 'Joyn', 'a5645acd-ae62-4d8a-abca-0eca8df24496', 1, 30, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('e89bcf59-e819-499e-82a2-6ff534fd73fd', NULL, 'idp-review-profile', 'Joyn', '40c54f9a-e896-4fdd-af05-61933da0205e', 0, 10, false, NULL, '1e248c12-3b2b-4b19-a235-21f9dd35b135');
+INSERT INTO authentication_execution VALUES ('15cce287-6536-4f4a-bf02-34a2bfa094c5', NULL, 'idp-create-user-if-unique', 'Joyn', '40c54f9a-e896-4fdd-af05-61933da0205e', 2, 20, false, NULL, '9b0d8966-bf5d-42a5-86af-5b89654fac39');
+INSERT INTO authentication_execution VALUES ('74ad7922-a7fc-4b3f-b307-bf07fe83d105', NULL, NULL, 'Joyn', '40c54f9a-e896-4fdd-af05-61933da0205e', 2, 30, true, '007ec7e0-829c-42b2-9e46-327bd34eb0f8', NULL);
+INSERT INTO authentication_execution VALUES ('2a54902a-16e8-4c3a-ac84-b4a0752d5153', NULL, 'auth-username-password-form', 'Joyn', 'd0266fc6-2e98-4896-be6a-8b58274582c7', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('186c6fad-5544-4633-bb62-ecf7a31aa5a0', NULL, 'auth-otp-form', 'Joyn', 'd0266fc6-2e98-4896-be6a-8b58274582c7', 1, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('85635584-127e-4e6d-89ad-b44d2fdbacce', NULL, 'registration-page-form', 'Joyn', '1592898e-e256-40cf-8117-bf08a175cd11', 0, 10, true, 'b8077afa-0c21-40a0-b057-d67066d6df48', NULL);
+INSERT INTO authentication_execution VALUES ('4e27f4f2-3174-4c3b-9507-8aa5e5b9efeb', NULL, 'registration-user-creation', 'Joyn', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('89d82860-a2a7-4358-be08-ca77b3629985', NULL, 'registration-profile-action', 'Joyn', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 40, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('1b313df5-18e3-4515-8c54-8bf45c474a32', NULL, 'registration-password-action', 'Joyn', 'b8077afa-0c21-40a0-b057-d67066d6df48', 0, 50, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('5fcb9a79-c373-4906-ba4e-249823fe08ec', NULL, 'registration-recaptcha-action', 'Joyn', 'b8077afa-0c21-40a0-b057-d67066d6df48', 3, 60, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('395af642-f1c9-406c-98c4-86d84bf261e3', NULL, 'reset-credentials-choose-user', 'Joyn', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('08af577f-e8d2-4326-bca3-80ad18b16626', NULL, 'reset-credential-email', 'Joyn', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('fbf96bbd-a433-4d5b-a0ac-b4013afa14a7', NULL, 'reset-password', 'Joyn', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 0, 30, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('13dd3d87-e5ac-43b4-ad35-48f0f7c18767', NULL, 'reset-otp', 'Joyn', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 1, 40, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('f331d71c-29df-410c-be16-fc6cf0c661c2', NULL, 'http-basic-authenticator', 'Joyn', 'a0e15855-00af-4e02-965d-9fdeafcaf6cf', 0, 10, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('8bba81f9-67fb-4bb2-bdc6-c29f99c4a63d', NULL, 'auth-cookie', 'fa758415-6fe8-4313-b599-643292361e3d', 'bac93b82-ef24-47a3-a20a-3bce871303c4', 2, 10, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('9f2eb289-122b-4145-9afb-c71485bc0ebc', NULL, 'auth-spnego', 'fa758415-6fe8-4313-b599-643292361e3d', 'bac93b82-ef24-47a3-a20a-3bce871303c4', 3, 20, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('c66f558b-1308-4a7f-87d4-70628a31572a', NULL, 'identity-provider-redirector', 'fa758415-6fe8-4313-b599-643292361e3d', 'bac93b82-ef24-47a3-a20a-3bce871303c4', 2, 25, false, NULL, NULL);
@@ -1550,40 +1550,40 @@ INSERT INTO authentication_execution VALUES ('df358ebd-a0c4-4425-8633-dcfae5feb2
 INSERT INTO authentication_execution VALUES ('6a78fc36-07a5-4cad-b80c-a1fb80ec8d85', NULL, 'idp-username-password-form', 'fa758415-6fe8-4313-b599-643292361e3d', '7bca7b97-8b2d-4296-aef6-2507a4e9481a', 0, 10, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('f419034f-7ea9-4da7-9ca8-2299aacbb402', NULL, 'auth-otp-form', 'fa758415-6fe8-4313-b599-643292361e3d', '7bca7b97-8b2d-4296-aef6-2507a4e9481a', 1, 20, false, NULL, NULL);
 INSERT INTO authentication_execution VALUES ('ac7af734-32a0-41ae-8ead-9984050f6e2c', NULL, 'http-basic-authenticator', 'fa758415-6fe8-4313-b599-643292361e3d', '83d8e778-0899-4f11-bc03-14095256a51c', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('b6676e4c-c03b-4580-be81-d89d94820089', NULL, 'idp-confirm-link', 'Colruyt', '14aeab8d-47ac-4870-912c-99f6f741dabf', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('73a4a089-6b16-475a-b6b3-83252a587963', NULL, 'idp-email-verification', 'Colruyt', '14aeab8d-47ac-4870-912c-99f6f741dabf', 2, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('5e2bdeed-c184-49ce-a6bb-a253367cd272', NULL, NULL, 'Colruyt', '14aeab8d-47ac-4870-912c-99f6f741dabf', 2, 30, true, '757b1b50-fefd-4834-9109-7755d97b5425', NULL);
-INSERT INTO authentication_execution VALUES ('98c29961-aa24-4afd-83d5-f5cc2a464aaf', NULL, 'idp-username-password-form', 'Colruyt', '757b1b50-fefd-4834-9109-7755d97b5425', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('9ea00eb2-08df-41e2-93f6-c9d1b4c03f75', NULL, 'auth-otp-form', 'Colruyt', '757b1b50-fefd-4834-9109-7755d97b5425', 1, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('4a5b0233-7af8-4438-8e4f-da1e819e43b1', NULL, 'auth-otp-form', 'Colruyt', '60731bee-4f24-4bf1-a42b-828e19ed456e', 1, 0, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('8e6d0261-d199-46f1-b70c-b147d2295329', NULL, 'auth-cookie', 'Colruyt', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('29903627-5b4b-4f79-8e20-2b418ae5d293', NULL, 'auth-spnego', 'Colruyt', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 3, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('ea0977d6-34f3-4a5b-a681-4659981c83bd', NULL, 'identity-provider-redirector', 'Colruyt', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 25, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('87f95be2-32b5-4946-b815-e0bea35fb2fa', NULL, NULL, 'Colruyt', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 30, true, 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', NULL);
-INSERT INTO authentication_execution VALUES ('197a21e8-aa9a-4725-b15d-7f53ddc782d3', NULL, 'client-secret', 'Colruyt', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('1d1a4db4-fd7f-4923-b99c-2c78eef45434', NULL, 'client-jwt', 'Colruyt', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('11af4727-55da-4621-b12f-083beb5ee556', NULL, 'direct-grant-validate-username', 'Colruyt', 'fb37f684-1563-4fa7-a3ff-f592530db418', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('8c84c754-5e47-4dc1-9236-37b90a9c76d5', NULL, 'direct-grant-validate-password', 'Colruyt', 'fb37f684-1563-4fa7-a3ff-f592530db418', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('17f2f597-3875-4536-ac86-2a73b29c2a7d', NULL, 'direct-grant-validate-otp', 'Colruyt', 'fb37f684-1563-4fa7-a3ff-f592530db418', 1, 30, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('7ef59d78-9f50-4893-81b0-a3a5dd78f13b', NULL, 'idp-review-profile', 'Colruyt', 'ae57d11c-3184-4758-99ed-b2734d502aff', 0, 10, false, NULL, '1abc1d19-55e5-4aed-92f7-428708a970dd');
-INSERT INTO authentication_execution VALUES ('adc1b5dc-7fb4-4bae-ad05-ce902a73f743', NULL, 'idp-create-user-if-unique', 'Colruyt', 'ae57d11c-3184-4758-99ed-b2734d502aff', 2, 20, false, NULL, 'dd1d7dfc-323b-4dd6-bcaa-9c9e6d8d4143');
-INSERT INTO authentication_execution VALUES ('2012757d-230d-477e-8ed1-615d95af208e', NULL, NULL, 'Colruyt', 'ae57d11c-3184-4758-99ed-b2734d502aff', 2, 30, true, '14aeab8d-47ac-4870-912c-99f6f741dabf', NULL);
-INSERT INTO authentication_execution VALUES ('90e78214-1763-4220-9648-4333e1df5135', NULL, 'auth-username-password-form', 'Colruyt', 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('066b55ae-f8f0-4954-b933-be37af41e35e', NULL, 'auth-otp-form', 'Colruyt', 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 1, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('ca4d7153-2bbd-4c42-8ac3-c085d5d65732', NULL, 'registration-page-form', 'Colruyt', '23ca7c0f-5232-428a-a608-eda42c381449', 0, 10, true, '68852766-a55f-4ea2-b938-e9e283789131', NULL);
-INSERT INTO authentication_execution VALUES ('6564a097-9539-4862-a637-ada092c1940f', NULL, 'registration-user-creation', 'Colruyt', '68852766-a55f-4ea2-b938-e9e283789131', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('d830127b-eaf7-4047-8f0f-20e411cd5b64', NULL, 'registration-profile-action', 'Colruyt', '68852766-a55f-4ea2-b938-e9e283789131', 0, 40, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('738e7bb6-e77f-4776-a064-af435a1efca4', NULL, 'registration-password-action', 'Colruyt', '68852766-a55f-4ea2-b938-e9e283789131', 0, 50, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('e26c70bd-a11c-4265-bda7-9189bb2413b9', NULL, 'registration-recaptcha-action', 'Colruyt', '68852766-a55f-4ea2-b938-e9e283789131', 3, 60, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('b8e42f61-c080-4a41-9ba8-0753e42ef0f5', NULL, 'reset-credentials-choose-user', 'Colruyt', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 10, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('a91b93b3-49e2-472e-8f2d-94ba1e5f7983', NULL, 'reset-credential-email', 'Colruyt', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 20, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('7d61375a-a54d-49d3-b189-e3fe14eccb76', NULL, 'reset-password', 'Colruyt', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 30, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('2491d3a1-95f3-457c-b166-ea182303b6d0', NULL, 'reset-otp', 'Colruyt', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 1, 40, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('29cfb7d2-ef33-415d-95c6-75e0d401442c', NULL, 'reset-credentials-choose-user', 'Colruyt', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 0, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('2fc29639-2c2a-4f90-8b8c-c37476b0bdd6', NULL, 'reset-credential-email', 'Colruyt', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 1, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('2ce36a9c-e677-4734-8736-6ba3d6c43fb4', NULL, 'reset-password', 'Colruyt', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 2, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('1de364c5-9206-4750-87e2-aa4be7c851c6', NULL, 'auth-otp-form', 'Colruyt', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 1, 3, false, NULL, NULL);
-INSERT INTO authentication_execution VALUES ('211e9f3b-cd1c-4841-80f2-d4581846d86e', NULL, 'http-basic-authenticator', 'Colruyt', 'b0dd91a9-0124-4791-99ed-2d8cb728765e', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('b6676e4c-c03b-4580-be81-d89d94820089', NULL, 'idp-confirm-link', 'FidCash', '14aeab8d-47ac-4870-912c-99f6f741dabf', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('73a4a089-6b16-475a-b6b3-83252a587963', NULL, 'idp-email-verification', 'FidCash', '14aeab8d-47ac-4870-912c-99f6f741dabf', 2, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('5e2bdeed-c184-49ce-a6bb-a253367cd272', NULL, NULL, 'FidCash', '14aeab8d-47ac-4870-912c-99f6f741dabf', 2, 30, true, '757b1b50-fefd-4834-9109-7755d97b5425', NULL);
+INSERT INTO authentication_execution VALUES ('98c29961-aa24-4afd-83d5-f5cc2a464aaf', NULL, 'idp-username-password-form', 'FidCash', '757b1b50-fefd-4834-9109-7755d97b5425', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('9ea00eb2-08df-41e2-93f6-c9d1b4c03f75', NULL, 'auth-otp-form', 'FidCash', '757b1b50-fefd-4834-9109-7755d97b5425', 1, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('4a5b0233-7af8-4438-8e4f-da1e819e43b1', NULL, 'auth-otp-form', 'FidCash', '60731bee-4f24-4bf1-a42b-828e19ed456e', 1, 0, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('8e6d0261-d199-46f1-b70c-b147d2295329', NULL, 'auth-cookie', 'FidCash', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('29903627-5b4b-4f79-8e20-2b418ae5d293', NULL, 'auth-spnego', 'FidCash', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 3, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('ea0977d6-34f3-4a5b-a681-4659981c83bd', NULL, 'identity-provider-redirector', 'FidCash', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 25, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('87f95be2-32b5-4946-b815-e0bea35fb2fa', NULL, NULL, 'FidCash', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', 2, 30, true, 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', NULL);
+INSERT INTO authentication_execution VALUES ('197a21e8-aa9a-4725-b15d-7f53ddc782d3', NULL, 'client-secret', 'FidCash', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('1d1a4db4-fd7f-4923-b99c-2c78eef45434', NULL, 'client-jwt', 'FidCash', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('11af4727-55da-4621-b12f-083beb5ee556', NULL, 'direct-grant-validate-username', 'FidCash', 'fb37f684-1563-4fa7-a3ff-f592530db418', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('8c84c754-5e47-4dc1-9236-37b90a9c76d5', NULL, 'direct-grant-validate-password', 'FidCash', 'fb37f684-1563-4fa7-a3ff-f592530db418', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('17f2f597-3875-4536-ac86-2a73b29c2a7d', NULL, 'direct-grant-validate-otp', 'FidCash', 'fb37f684-1563-4fa7-a3ff-f592530db418', 1, 30, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('7ef59d78-9f50-4893-81b0-a3a5dd78f13b', NULL, 'idp-review-profile', 'FidCash', 'ae57d11c-3184-4758-99ed-b2734d502aff', 0, 10, false, NULL, '1abc1d19-55e5-4aed-92f7-428708a970dd');
+INSERT INTO authentication_execution VALUES ('adc1b5dc-7fb4-4bae-ad05-ce902a73f743', NULL, 'idp-create-user-if-unique', 'FidCash', 'ae57d11c-3184-4758-99ed-b2734d502aff', 2, 20, false, NULL, 'dd1d7dfc-323b-4dd6-bcaa-9c9e6d8d4143');
+INSERT INTO authentication_execution VALUES ('2012757d-230d-477e-8ed1-615d95af208e', NULL, NULL, 'FidCash', 'ae57d11c-3184-4758-99ed-b2734d502aff', 2, 30, true, '14aeab8d-47ac-4870-912c-99f6f741dabf', NULL);
+INSERT INTO authentication_execution VALUES ('90e78214-1763-4220-9648-4333e1df5135', NULL, 'auth-username-password-form', 'FidCash', 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('066b55ae-f8f0-4954-b933-be37af41e35e', NULL, 'auth-otp-form', 'FidCash', 'abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 1, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('ca4d7153-2bbd-4c42-8ac3-c085d5d65732', NULL, 'registration-page-form', 'FidCash', '23ca7c0f-5232-428a-a608-eda42c381449', 0, 10, true, '68852766-a55f-4ea2-b938-e9e283789131', NULL);
+INSERT INTO authentication_execution VALUES ('6564a097-9539-4862-a637-ada092c1940f', NULL, 'registration-user-creation', 'FidCash', '68852766-a55f-4ea2-b938-e9e283789131', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('d830127b-eaf7-4047-8f0f-20e411cd5b64', NULL, 'registration-profile-action', 'FidCash', '68852766-a55f-4ea2-b938-e9e283789131', 0, 40, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('738e7bb6-e77f-4776-a064-af435a1efca4', NULL, 'registration-password-action', 'FidCash', '68852766-a55f-4ea2-b938-e9e283789131', 0, 50, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('e26c70bd-a11c-4265-bda7-9189bb2413b9', NULL, 'registration-recaptcha-action', 'FidCash', '68852766-a55f-4ea2-b938-e9e283789131', 3, 60, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('b8e42f61-c080-4a41-9ba8-0753e42ef0f5', NULL, 'reset-credentials-choose-user', 'FidCash', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 10, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('a91b93b3-49e2-472e-8f2d-94ba1e5f7983', NULL, 'reset-credential-email', 'FidCash', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 20, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('7d61375a-a54d-49d3-b189-e3fe14eccb76', NULL, 'reset-password', 'FidCash', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 0, 30, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('2491d3a1-95f3-457c-b166-ea182303b6d0', NULL, 'reset-otp', 'FidCash', 'afc53ff5-fd60-48cc-9611-e1b1503d1394', 1, 40, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('29cfb7d2-ef33-415d-95c6-75e0d401442c', NULL, 'reset-credentials-choose-user', 'FidCash', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 0, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('2fc29639-2c2a-4f90-8b8c-c37476b0bdd6', NULL, 'reset-credential-email', 'FidCash', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 1, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('2ce36a9c-e677-4734-8736-6ba3d6c43fb4', NULL, 'reset-password', 'FidCash', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 0, 2, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('1de364c5-9206-4750-87e2-aa4be7c851c6', NULL, 'auth-otp-form', 'FidCash', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', 1, 3, false, NULL, NULL);
+INSERT INTO authentication_execution VALUES ('211e9f3b-cd1c-4841-80f2-d4581846d86e', NULL, 'http-basic-authenticator', 'FidCash', 'b0dd91a9-0124-4791-99ed-2d8cb728765e', 0, 10, false, NULL, NULL);
 
 
 --
@@ -1601,17 +1601,17 @@ INSERT INTO authentication_flow VALUES ('89fdc027-e91e-48fc-b1ea-44e8cf2d39d7', 
 INSERT INTO authentication_flow VALUES ('057db164-0177-4bfb-8330-118be85c2e14', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'master', 'basic-flow', false, true);
 INSERT INTO authentication_flow VALUES ('29819766-56af-4842-bf6f-dbc1f03065fc', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'master', 'basic-flow', false, true);
 INSERT INTO authentication_flow VALUES ('123778c0-7127-4a6d-a282-eb9d0f15633b', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'master', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('007ec7e0-829c-42b2-9e46-327bd34eb0f8', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'Aldi', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'Aldi', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('dde585ff-0e30-4a14-af37-d6fad287fd26', 'browser', 'browser based authentication', 'Aldi', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('218dc39b-958a-44b5-b972-178aa7fa2d77', 'clients', 'Base authentication for clients', 'Aldi', 'client-flow', true, true);
-INSERT INTO authentication_flow VALUES ('a5645acd-ae62-4d8a-abca-0eca8df24496', 'direct grant', 'OpenID Connect Resource Owner Grant', 'Aldi', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('40c54f9a-e896-4fdd-af05-61933da0205e', 'first broker login', 'Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account', 'Aldi', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('d0266fc6-2e98-4896-be6a-8b58274582c7', 'forms', 'Username, password, otp and other auth forms.', 'Aldi', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('1592898e-e256-40cf-8117-bf08a175cd11', 'registration', 'registration flow', 'Aldi', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('b8077afa-0c21-40a0-b057-d67066d6df48', 'registration form', 'registration form', 'Aldi', 'form-flow', false, true);
-INSERT INTO authentication_flow VALUES ('5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 'reset credentials', 'Reset credentials for a user if they forgot their password or something', 'Aldi', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('a0e15855-00af-4e02-965d-9fdeafcaf6cf', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'Aldi', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('007ec7e0-829c-42b2-9e46-327bd34eb0f8', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'Joyn', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('fc2d3039-b9c6-4c17-84ec-b1dd4eca7d62', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'Joyn', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('dde585ff-0e30-4a14-af37-d6fad287fd26', 'browser', 'browser based authentication', 'Joyn', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('218dc39b-958a-44b5-b972-178aa7fa2d77', 'clients', 'Base authentication for clients', 'Joyn', 'client-flow', true, true);
+INSERT INTO authentication_flow VALUES ('a5645acd-ae62-4d8a-abca-0eca8df24496', 'direct grant', 'OpenID Connect Resource Owner Grant', 'Joyn', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('40c54f9a-e896-4fdd-af05-61933da0205e', 'first broker login', 'Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account', 'Joyn', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('d0266fc6-2e98-4896-be6a-8b58274582c7', 'forms', 'Username, password, otp and other auth forms.', 'Joyn', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('1592898e-e256-40cf-8117-bf08a175cd11', 'registration', 'registration flow', 'Joyn', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('b8077afa-0c21-40a0-b057-d67066d6df48', 'registration form', 'registration form', 'Joyn', 'form-flow', false, true);
+INSERT INTO authentication_flow VALUES ('5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', 'reset credentials', 'Reset credentials for a user if they forgot their password or something', 'Joyn', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('a0e15855-00af-4e02-965d-9fdeafcaf6cf', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'Joyn', 'basic-flow', true, true);
 INSERT INTO authentication_flow VALUES ('bac93b82-ef24-47a3-a20a-3bce871303c4', 'browser', 'browser based authentication', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', true, true);
 INSERT INTO authentication_flow VALUES ('3a67249a-ab83-4d79-8d48-6be62ca0f3b7', 'forms', 'Username, password, otp and other auth forms.', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', false, true);
 INSERT INTO authentication_flow VALUES ('5ced2963-d2a9-4a1d-b5f7-0764ceb9f3a2', 'direct grant', 'OpenID Connect Resource Owner Grant', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', true, true);
@@ -1623,19 +1623,19 @@ INSERT INTO authentication_flow VALUES ('f2041c81-e9fe-4d68-8e5a-99a4eb187624', 
 INSERT INTO authentication_flow VALUES ('2cdfd55b-2100-4de5-a1f9-803eef768877', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', false, true);
 INSERT INTO authentication_flow VALUES ('7bca7b97-8b2d-4296-aef6-2507a4e9481a', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', false, true);
 INSERT INTO authentication_flow VALUES ('83d8e778-0899-4f11-bc03-14095256a51c', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'fa758415-6fe8-4313-b599-643292361e3d', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('14aeab8d-47ac-4870-912c-99f6f741dabf', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'Colruyt', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('757b1b50-fefd-4834-9109-7755d97b5425', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'Colruyt', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('60731bee-4f24-4bf1-a42b-828e19ed456e', 'broker-otp', 'Require OTP (when enabled) after social login.', 'Colruyt', 'basic-flow', true, false);
-INSERT INTO authentication_flow VALUES ('fb8b4160-f51c-4652-bcf6-accd50142f7f', 'browser', 'browser based authentication', 'Colruyt', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 'clients', 'Base authentication for clients', 'Colruyt', 'client-flow', true, true);
-INSERT INTO authentication_flow VALUES ('fb37f684-1563-4fa7-a3ff-f592530db418', 'direct grant', 'OpenID Connect Resource Owner Grant', 'Colruyt', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('ae57d11c-3184-4758-99ed-b2734d502aff', 'first broker login', 'Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account', 'Colruyt', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 'forms', 'Username, password, otp and other auth forms.', 'Colruyt', 'basic-flow', false, true);
-INSERT INTO authentication_flow VALUES ('23ca7c0f-5232-428a-a608-eda42c381449', 'registration', 'registration flow', 'Colruyt', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('68852766-a55f-4ea2-b938-e9e283789131', 'registration form', 'registration form', 'Colruyt', 'form-flow', false, true);
-INSERT INTO authentication_flow VALUES ('afc53ff5-fd60-48cc-9611-e1b1503d1394', 'reset credentials', 'Reset credentials for a user if they forgot their password or something', 'Colruyt', 'basic-flow', true, true);
-INSERT INTO authentication_flow VALUES ('de65c6b1-4896-4b0a-b799-6694a0715c0a', 'reset-password-require-otp', 'This flow requires an OTP (when enabled) after a password reset. This means that, if a user loses the second factor, he will NEVER be able to login again. This is more secure and aligns with industry standards.', 'Colruyt', 'basic-flow', true, false);
-INSERT INTO authentication_flow VALUES ('b0dd91a9-0124-4791-99ed-2d8cb728765e', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'Colruyt', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('14aeab8d-47ac-4870-912c-99f6f741dabf', 'Handle Existing Account', 'Handle what to do if there is existing account with same email/username like authenticated identity provider', 'FidCash', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('757b1b50-fefd-4834-9109-7755d97b5425', 'Verify Existing Account by Re-authentication', 'Reauthentication of existing account', 'FidCash', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('60731bee-4f24-4bf1-a42b-828e19ed456e', 'broker-otp', 'Require OTP (when enabled) after social login.', 'FidCash', 'basic-flow', true, false);
+INSERT INTO authentication_flow VALUES ('fb8b4160-f51c-4652-bcf6-accd50142f7f', 'browser', 'browser based authentication', 'FidCash', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 'clients', 'Base authentication for clients', 'FidCash', 'client-flow', true, true);
+INSERT INTO authentication_flow VALUES ('fb37f684-1563-4fa7-a3ff-f592530db418', 'direct grant', 'OpenID Connect Resource Owner Grant', 'FidCash', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('ae57d11c-3184-4758-99ed-b2734d502aff', 'first broker login', 'Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account', 'FidCash', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('abf3e24f-f667-4bb8-adbe-2cce88f4ba28', 'forms', 'Username, password, otp and other auth forms.', 'FidCash', 'basic-flow', false, true);
+INSERT INTO authentication_flow VALUES ('23ca7c0f-5232-428a-a608-eda42c381449', 'registration', 'registration flow', 'FidCash', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('68852766-a55f-4ea2-b938-e9e283789131', 'registration form', 'registration form', 'FidCash', 'form-flow', false, true);
+INSERT INTO authentication_flow VALUES ('afc53ff5-fd60-48cc-9611-e1b1503d1394', 'reset credentials', 'Reset credentials for a user if they forgot their password or something', 'FidCash', 'basic-flow', true, true);
+INSERT INTO authentication_flow VALUES ('de65c6b1-4896-4b0a-b799-6694a0715c0a', 'reset-password-require-otp', 'This flow requires an OTP (when enabled) after a password reset. This means that, if a user loses the second factor, he will NEVER be able to login again. This is more secure and aligns with industry standards.', 'FidCash', 'basic-flow', true, false);
+INSERT INTO authentication_flow VALUES ('b0dd91a9-0124-4791-99ed-2d8cb728765e', 'saml ecp', 'SAML ECP Profile Authentication Flow', 'FidCash', 'basic-flow', true, true);
 
 
 --
@@ -1644,12 +1644,12 @@ INSERT INTO authentication_flow VALUES ('b0dd91a9-0124-4791-99ed-2d8cb728765e', 
 
 INSERT INTO authenticator_config VALUES ('b692ba14-ceed-4ce2-89d9-09a9d14dc2a3', 'review profile config', 'master');
 INSERT INTO authenticator_config VALUES ('34d43252-a120-4ebb-b8ef-54a17bbc94e1', 'create unique user config', 'master');
-INSERT INTO authenticator_config VALUES ('9b0d8966-bf5d-42a5-86af-5b89654fac39', 'create unique user config', 'Aldi');
-INSERT INTO authenticator_config VALUES ('1e248c12-3b2b-4b19-a235-21f9dd35b135', 'review profile config', 'Aldi');
+INSERT INTO authenticator_config VALUES ('9b0d8966-bf5d-42a5-86af-5b89654fac39', 'create unique user config', 'Joyn');
+INSERT INTO authenticator_config VALUES ('1e248c12-3b2b-4b19-a235-21f9dd35b135', 'review profile config', 'Joyn');
 INSERT INTO authenticator_config VALUES ('d1f85878-8c0c-4ceb-b670-bd334b29c584', 'review profile config', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO authenticator_config VALUES ('4cc75ea9-8dfa-48db-b98d-cd284c0fba83', 'create unique user config', 'fa758415-6fe8-4313-b599-643292361e3d');
-INSERT INTO authenticator_config VALUES ('dd1d7dfc-323b-4dd6-bcaa-9c9e6d8d4143', 'create unique user config', 'Colruyt');
-INSERT INTO authenticator_config VALUES ('1abc1d19-55e5-4aed-92f7-428708a970dd', 'review profile config', 'Colruyt');
+INSERT INTO authenticator_config VALUES ('dd1d7dfc-323b-4dd6-bcaa-9c9e6d8d4143', 'create unique user config', 'FidCash');
+INSERT INTO authenticator_config VALUES ('1abc1d19-55e5-4aed-92f7-428708a970dd', 'review profile config', 'FidCash');
 
 
 --
@@ -1681,10 +1681,10 @@ INSERT INTO client VALUES ('d19d260c-bfd9-4375-b4f4-c9b7c6188289', true, false, 
 INSERT INTO client VALUES ('b48a0302-d58e-430e-8ed8-8231a282da39', true, false, 'broker', 0, false, '3d4b0ac5-7eed-4846-9873-ce9900c79215', NULL, false, NULL, false, 'master', NULL, 0, false, false, '${client_broker}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('84a138ae-2da9-4b1d-8149-7e1f726aefa8', true, false, 'security-admin-console', 0, true, 'ec5c551b-e052-4fb9-b16f-3e0ac0bd52e1', '/auth/admin/master/console/index.html', false, NULL, false, 'master', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('ea5c74a8-9fbf-4d1f-a63b-22f34ec80ab8', true, false, 'admin-cli', 0, true, '81bbaa05-8280-4891-b7f6-ffcc15edbada', NULL, false, NULL, false, 'master', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
-INSERT INTO client VALUES ('0a87bd58-0cf4-4e19-a1e1-52525afc8823', true, false, 'admin-cli', 0, true, '5fdc349c-0452-4ec3-b197-e1b1a42e94a2', NULL, false, NULL, false, 'Aldi', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
-INSERT INTO client VALUES ('b41ab070-1f92-4562-8f2c-965ab07138e0', true, false, 'broker', 0, false, 'a20c92c4-8431-44a5-acd0-247daf452496', NULL, false, NULL, false, 'Aldi', NULL, 0, false, false, '${client_broker}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('8f8d9417-ed6c-481a-bac6-f2735a298156', true, false, 'realm-management', 0, false, 'd14ec4b5-8d2e-4a3b-b8f7-babfae1281a0', NULL, true, NULL, false, 'Aldi', NULL, 0, false, false, '${client_realm-management}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('8b21dd0e-1799-45fe-ae06-d4ffe1f596a3', true, true, 'test_svc', 0, true, '07304f21-0bb8-49f7-b408-f70d6e641d21', NULL, true, NULL, false, 'Aldi', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, 'the test service', NULL, true, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('0a87bd58-0cf4-4e19-a1e1-52525afc8823', true, false, 'admin-cli', 0, true, '5fdc349c-0452-4ec3-b197-e1b1a42e94a2', NULL, false, NULL, false, 'Joyn', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('b41ab070-1f92-4562-8f2c-965ab07138e0', true, false, 'broker', 0, false, 'a20c92c4-8431-44a5-acd0-247daf452496', NULL, false, NULL, false, 'Joyn', NULL, 0, false, false, '${client_broker}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('8f8d9417-ed6c-481a-bac6-f2735a298156', true, false, 'realm-management', 0, false, 'd14ec4b5-8d2e-4a3b-b8f7-babfae1281a0', NULL, true, NULL, false, 'Joyn', NULL, 0, false, false, '${client_realm-management}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('8b21dd0e-1799-45fe-ae06-d4ffe1f596a3', true, true, 'test_svc', 0, true, '07304f21-0bb8-49f7-b408-f70d6e641d21', NULL, true, NULL, false, 'Joyn', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, 'the test service', NULL, true, false, true, NULL, false, false, false);
 INSERT INTO client VALUES ('9b1705ee-b907-443e-9fd9-568448f312d3', true, true, 'apiman-realm', 0, false, 'f7feb2e5-315f-4a6d-adef-56b18fe3329e', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'apiman Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('5bb93364-13a4-4071-8275-14083447bba4', true, false, 'realm-management', 0, false, '02d203d4-c709-4a68-bd64-2c0ec8c3892e', NULL, true, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', NULL, 0, false, false, '${client_realm-management}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('4dd5f99f-18cf-4f4f-ad84-bb6a0f566d15', true, false, 'account', 0, false, 'b706ac1b-2d7c-478b-a385-8c569ce6e53d', '/auth/realms/apiman/account', false, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
@@ -1693,19 +1693,19 @@ INSERT INTO client VALUES ('9d135049-107a-43fd-af59-46bfbe870158', true, false, 
 INSERT INTO client VALUES ('cc90450b-01a7-4178-bd2b-74cf91436f2f', true, false, 'admin-cli', 0, true, 'a6150a9c-bb03-4dec-b78a-64e5abd9c466', NULL, false, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
 INSERT INTO client VALUES ('3b1e3885-0b42-4569-84c7-dc7f2dd7183b', true, true, 'apimanui', 0, true, '722557fd-a725-4cc0-9dff-7d09c0c47038', '/apimanui', false, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', NULL, -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('11afe0d4-0779-410a-a962-f9c50bd3122f', true, true, 'apiman', 0, false, '5af5458f-0a96-4251-8f92-08ebcc3a8aa2', '/apiman', false, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', NULL, -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('819991a5-96df-4ab0-bec2-c9a1cfdf86aa', true, false, 'admin-cli', 0, true, '8f9d7941-9eb6-4dfa-9761-eae8d6632ba8', NULL, false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
-INSERT INTO client VALUES ('6a832b8b-e8e6-46f6-8a99-85e147e0448a', true, false, 'broker', 0, false, 'c370d4d0-3bfa-499a-b259-b3a9ba7a4575', NULL, false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_broker}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, false, 'realm-management', 0, false, '33f2806e-c83a-4aba-a4cd-8f7026aad13d', NULL, true, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_realm-management}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('cf2c62a5-c21b-44e3-a9a3-2b88fad2992f', true, true, 'test_svc', 0, true, '07304f21-0bb8-49f7-b408-f70d6e641d21', NULL, true, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, 'the test service', NULL, true, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('819991a5-96df-4ab0-bec2-c9a1cfdf86aa', true, false, 'admin-cli', 0, true, '8f9d7941-9eb6-4dfa-9761-eae8d6632ba8', NULL, false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_admin-cli}', false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('6a832b8b-e8e6-46f6-8a99-85e147e0448a', true, false, 'broker', 0, false, 'c370d4d0-3bfa-499a-b259-b3a9ba7a4575', NULL, false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_broker}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, false, 'realm-management', 0, false, '33f2806e-c83a-4aba-a4cd-8f7026aad13d', NULL, true, NULL, false, 'FidCash', NULL, 0, false, false, '${client_realm-management}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('cf2c62a5-c21b-44e3-a9a3-2b88fad2992f', true, true, 'test_svc', 0, true, '07304f21-0bb8-49f7-b408-f70d6e641d21', NULL, true, NULL, false, 'FidCash', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, 'the test service', NULL, true, false, true, NULL, false, false, false);
 INSERT INTO client VALUES ('fd470925-9bc4-46ab-8e4b-e09094ba3c53', true, true, 'apiman-gateway-api', 0, true, '217b725d-7790-47a7-a3fc-5cf31f92a8db', '/apiman-gateway-api', false, NULL, false, 'fa758415-6fe8-4313-b599-643292361e3d', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
-INSERT INTO client VALUES ('dd112d33-6fb0-4566-8966-a70d5905c056', true, true, 'Aldi-realm', 0, false, '124d26e5-5191-434d-aa9c-5512b5d76025', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'Aldi Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('8210d5e2-cc3c-4eb6-be99-3a32667a378a', true, false, 'security-admin-console', 0, true, 'f7ff058e-496d-41c7-a286-91e6ebbc8b35', '/auth/admin/Aldi/console/index.html', false, NULL, false, 'Aldi', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('ab721dba-4af4-4d1d-b686-aec44d62d883', true, false, 'account', 0, false, '27d83b9f-f309-45cc-a001-11e142510924', '/auth/realms/Aldi/account', false, NULL, false, 'Aldi', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('f8692af8-3bed-4a28-891d-0b2e5de5e9a0', true, false, 'aldiApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Aldi', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
-INSERT INTO client VALUES ('102112b4-0529-46c4-afc3-5dded7a42ff9', true, true, 'Colruyt-realm', 0, false, 'c1c23e2d-af1a-4185-90a7-a1ed63e4869c', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'Colruyt Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', true, false, 'security-admin-console', 0, true, '1e7712f0-c2bb-46db-978d-76e12dcf5b11', '/auth/admin/Colruyt/console/index.html', false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, false, 'account', 0, false, 'e92a3264-9841-43a8-914d-8a4b87cc1434', '/auth/realms/Colruyt/account', false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, false, 'colruytApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('dd112d33-6fb0-4566-8966-a70d5905c056', true, true, 'Aldi-realm', 0, false, '124d26e5-5191-434d-aa9c-5512b5d76025', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'Joyn Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('8210d5e2-cc3c-4eb6-be99-3a32667a378a', true, false, 'security-admin-console', 0, true, 'f7ff058e-496d-41c7-a286-91e6ebbc8b35', '/auth/admin/Aldi/console/index.html', false, NULL, false, 'Joyn', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('ab721dba-4af4-4d1d-b686-aec44d62d883', true, false, 'account', 0, false, '27d83b9f-f309-45cc-a001-11e142510924', '/auth/realms/Aldi/account', false, NULL, false, 'Joyn', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('f8692af8-3bed-4a28-891d-0b2e5de5e9a0', true, false, 'aldiApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Joyn', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('102112b4-0529-46c4-afc3-5dded7a42ff9', true, true, 'Colruyt-realm', 0, false, 'c1c23e2d-af1a-4185-90a7-a1ed63e4869c', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'FidCash Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', true, false, 'security-admin-console', 0, true, '1e7712f0-c2bb-46db-978d-76e12dcf5b11', '/auth/admin/Colruyt/console/index.html', false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, false, 'account', 0, false, 'e92a3264-9841-43a8-914d-8a4b87cc1434', '/auth/realms/Colruyt/account', false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
+INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, false, 'colruytApplication', 0, false, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'FidCash', 'openid-connect', -1, false, false, NULL, true, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
 
 
 --
@@ -1849,16 +1849,16 @@ INSERT INTO component VALUES ('47f2595b-95bc-441c-a7f6-3e1dbc4ac31c', 'Allowed P
 INSERT INTO component VALUES ('44416f85-7bb3-460d-85f3-901faa905d11', 'Allowed Client Templates', 'master', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'master', 'authenticated');
 INSERT INTO component VALUES ('8de4ab23-9fca-44b4-8ddb-159882d2c469', 'rsa-generated', 'master', 'rsa-generated', 'org.keycloak.keys.KeyProvider', 'master', NULL);
 INSERT INTO component VALUES ('038159ed-6d42-48a6-9f7d-9b2f30a28efd', 'hmac-generated', 'master', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'master', NULL);
-INSERT INTO component VALUES ('a908a3bc-2dc5-43c2-b261-a97e7aea9bcd', 'Trusted Hosts', 'Aldi', 'trusted-hosts', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('67280800-09a1-4689-9da6-f6cc151845ca', 'Consent Required', 'Aldi', 'consent-required', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('7e3ae67c-6cfb-4aaf-b3a1-9f125a1593e8', 'Full Scope Disabled', 'Aldi', 'scope', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('c7eb3b50-b48f-4359-a0b9-67e2c7fd5721', 'Max Clients Limit', 'Aldi', 'max-clients', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('e4c31105-4d6f-4ff8-b99b-95d2ac7154be', 'Allowed Protocol Mapper Types', 'Aldi', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('fae8977b-7059-476e-8e40-26b4239c0ef0', 'Allowed Client Templates', 'Aldi', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'anonymous');
-INSERT INTO component VALUES ('80d5a93f-6a70-41f8-993b-48c405a1d80d', 'Allowed Protocol Mapper Types', 'Aldi', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'authenticated');
-INSERT INTO component VALUES ('4ebe0a1d-c4ef-49a0-818c-8e58b8a49c47', 'Allowed Client Templates', 'Aldi', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Aldi', 'authenticated');
-INSERT INTO component VALUES ('26433f9d-7a11-4494-abd2-2123f82cedfb', 'rsa-generated', 'Aldi', 'rsa-generated', 'org.keycloak.keys.KeyProvider', 'Aldi', NULL);
-INSERT INTO component VALUES ('17a00c00-220e-4924-baad-8d6217281821', 'hmac-generated', 'Aldi', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'Aldi', NULL);
+INSERT INTO component VALUES ('a908a3bc-2dc5-43c2-b261-a97e7aea9bcd', 'Trusted Hosts', 'Joyn', 'trusted-hosts', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('67280800-09a1-4689-9da6-f6cc151845ca', 'Consent Required', 'Joyn', 'consent-required', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('7e3ae67c-6cfb-4aaf-b3a1-9f125a1593e8', 'Full Scope Disabled', 'Joyn', 'scope', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('c7eb3b50-b48f-4359-a0b9-67e2c7fd5721', 'Max Clients Limit', 'Joyn', 'max-clients', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('e4c31105-4d6f-4ff8-b99b-95d2ac7154be', 'Allowed Protocol Mapper Types', 'Joyn', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('fae8977b-7059-476e-8e40-26b4239c0ef0', 'Allowed Client Templates', 'Joyn', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'anonymous');
+INSERT INTO component VALUES ('80d5a93f-6a70-41f8-993b-48c405a1d80d', 'Allowed Protocol Mapper Types', 'Joyn', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'authenticated');
+INSERT INTO component VALUES ('4ebe0a1d-c4ef-49a0-818c-8e58b8a49c47', 'Allowed Client Templates', 'Joyn', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Joyn', 'authenticated');
+INSERT INTO component VALUES ('26433f9d-7a11-4494-abd2-2123f82cedfb', 'rsa-generated', 'Joyn', 'rsa-generated', 'org.keycloak.keys.KeyProvider', 'Joyn', NULL);
+INSERT INTO component VALUES ('17a00c00-220e-4924-baad-8d6217281821', 'hmac-generated', 'Joyn', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'Joyn', NULL);
 INSERT INTO component VALUES ('d5b76f5c-9909-4e84-8d49-eeb7b7cec1b4', 'rsa', 'fa758415-6fe8-4313-b599-643292361e3d', 'rsa', 'org.keycloak.keys.KeyProvider', 'fa758415-6fe8-4313-b599-643292361e3d', NULL);
 INSERT INTO component VALUES ('6b95677d-2e84-4f6f-961f-93dafc2ef8c2', 'hmac-generated', 'fa758415-6fe8-4313-b599-643292361e3d', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'fa758415-6fe8-4313-b599-643292361e3d', NULL);
 INSERT INTO component VALUES ('a91d3371-1743-47f0-ad58-d09ac94ccc63', 'Trusted Hosts', 'fa758415-6fe8-4313-b599-643292361e3d', 'trusted-hosts', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'fa758415-6fe8-4313-b599-643292361e3d', 'anonymous');
@@ -1869,16 +1869,16 @@ INSERT INTO component VALUES ('94b0c0db-0d9b-4bdc-9921-d05c09c2ede3', 'Allowed P
 INSERT INTO component VALUES ('694bfd8b-c229-4f5a-9219-60a755ea586a', 'Allowed Client Templates', 'fa758415-6fe8-4313-b599-643292361e3d', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'fa758415-6fe8-4313-b599-643292361e3d', 'anonymous');
 INSERT INTO component VALUES ('4684b3a7-abfa-43ae-b462-77d26cc600a4', 'Allowed Protocol Mapper Types', 'fa758415-6fe8-4313-b599-643292361e3d', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'fa758415-6fe8-4313-b599-643292361e3d', 'authenticated');
 INSERT INTO component VALUES ('adedde97-0a0e-4b9e-9e2c-0322a8985e79', 'Allowed Client Templates', 'fa758415-6fe8-4313-b599-643292361e3d', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'fa758415-6fe8-4313-b599-643292361e3d', 'authenticated');
-INSERT INTO component VALUES ('c3a9528a-5cb8-4bcf-aeee-4e2e99ca7312', 'Trusted Hosts', 'Colruyt', 'trusted-hosts', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('667961d0-5f17-438a-8c88-083ac474a594', 'Consent Required', 'Colruyt', 'consent-required', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('2acd0902-6370-4ecd-97b3-800a0f75aa55', 'Full Scope Disabled', 'Colruyt', 'scope', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('65ddef6b-aa8d-4c4e-ba10-15495c05adaf', 'Max Clients Limit', 'Colruyt', 'max-clients', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('82d9d641-2cef-449e-91bb-f04d03585cfb', 'Allowed Protocol Mapper Types', 'Colruyt', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('b60c1e22-020a-47a6-83d7-b11a27230e8a', 'Allowed Client Templates', 'Colruyt', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'anonymous');
-INSERT INTO component VALUES ('3803a521-a51a-4e75-9e14-b7073e229697', 'Allowed Protocol Mapper Types', 'Colruyt', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'authenticated');
-INSERT INTO component VALUES ('c27fafab-1c99-48c5-ade9-0a3752a59762', 'Allowed Client Templates', 'Colruyt', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'Colruyt', 'authenticated');
-INSERT INTO component VALUES ('609655d0-3d1b-4100-92df-a9017238326c', 'rsa-generated', 'Colruyt', 'rsa-generated', 'org.keycloak.keys.KeyProvider', 'Colruyt', NULL);
-INSERT INTO component VALUES ('24ea3a95-5bb4-4ba5-a6f5-7e0f147b0e58', 'hmac-generated', 'Colruyt', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'Colruyt', NULL);
+INSERT INTO component VALUES ('c3a9528a-5cb8-4bcf-aeee-4e2e99ca7312', 'Trusted Hosts', 'FidCash', 'trusted-hosts', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('667961d0-5f17-438a-8c88-083ac474a594', 'Consent Required', 'FidCash', 'consent-required', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('2acd0902-6370-4ecd-97b3-800a0f75aa55', 'Full Scope Disabled', 'FidCash', 'scope', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('65ddef6b-aa8d-4c4e-ba10-15495c05adaf', 'Max Clients Limit', 'FidCash', 'max-clients', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('82d9d641-2cef-449e-91bb-f04d03585cfb', 'Allowed Protocol Mapper Types', 'FidCash', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('b60c1e22-020a-47a6-83d7-b11a27230e8a', 'Allowed Client Templates', 'FidCash', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'anonymous');
+INSERT INTO component VALUES ('3803a521-a51a-4e75-9e14-b7073e229697', 'Allowed Protocol Mapper Types', 'FidCash', 'allowed-protocol-mappers', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'authenticated');
+INSERT INTO component VALUES ('c27fafab-1c99-48c5-ade9-0a3752a59762', 'Allowed Client Templates', 'FidCash', 'allowed-client-templates', 'org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy', 'FidCash', 'authenticated');
+INSERT INTO component VALUES ('609655d0-3d1b-4100-92df-a9017238326c', 'rsa-generated', 'FidCash', 'rsa-generated', 'org.keycloak.keys.KeyProvider', 'FidCash', NULL);
+INSERT INTO component VALUES ('24ea3a95-5bb4-4ba5-a6f5-7e0f147b0e58', 'hmac-generated', 'FidCash', 'hmac-generated', 'org.keycloak.keys.KeyProvider', 'FidCash', NULL);
 
 
 --
@@ -2271,8 +2271,8 @@ INSERT INTO group_attribute VALUES ('d4ba9062-0399-4ce1-89a6-af476f5c909d', 'bus
 -- Data for Name: identity_provider; Type: TABLE DATA; Schema: public; Owner: keycloak
 --
 
-INSERT INTO identity_provider VALUES ('f1dab45d-6003-4822-814c-29057998fa19', true, 'google', 'google', false, false, 'Colruyt', false, true, 'ae57d11c-3184-4758-99ed-b2734d502aff', '60731bee-4f24-4bf1-a42b-828e19ed456e', NULL, false);
-INSERT INTO identity_provider VALUES ('856b5a67-625d-4694-9f49-3157e7b405b2', true, 'facebook', 'facebook', false, false, 'Colruyt', false, true, 'ae57d11c-3184-4758-99ed-b2734d502aff', '60731bee-4f24-4bf1-a42b-828e19ed456e', NULL, false);
+INSERT INTO identity_provider VALUES ('f1dab45d-6003-4822-814c-29057998fa19', true, 'google', 'google', false, false, 'FidCash', false, true, 'ae57d11c-3184-4758-99ed-b2734d502aff', '60731bee-4f24-4bf1-a42b-828e19ed456e', NULL, false);
+INSERT INTO identity_provider VALUES ('856b5a67-625d-4694-9f49-3157e7b405b2', true, 'facebook', 'facebook', false, false, 'FidCash', false, true, 'ae57d11c-3184-4758-99ed-b2734d502aff', '60731bee-4f24-4bf1-a42b-828e19ed456e', NULL, false);
 
 
 --
@@ -2303,10 +2303,10 @@ INSERT INTO identity_provider_config VALUES ('856b5a67-625d-4694-9f49-3157e7b405
 -- Data for Name: keycloak_group; Type: TABLE DATA; Schema: public; Owner: keycloak
 --
 
-INSERT INTO keycloak_group VALUES ('4e630f16-cc0e-4fdb-a430-190ce9e8bbf7', 'Carrefour', NULL, 'Aldi');
-INSERT INTO keycloak_group VALUES ('4e3ea1f9-761e-4888-9ac4-81efd61c2638', 'Delhaize', NULL, 'Aldi');
-INSERT INTO keycloak_group VALUES ('603ce513-8f56-4efc-8de6-400c5fbaa38a', 'Carrefour', NULL, 'Colruyt');
-INSERT INTO keycloak_group VALUES ('a6ce1c4e-80d3-48b1-a861-db93f3ea7950', 'Colruyt', NULL, 'Colruyt');
+INSERT INTO keycloak_group VALUES ('4e630f16-cc0e-4fdb-a430-190ce9e8bbf7', 'Carrefour', NULL, 'Joyn');
+INSERT INTO keycloak_group VALUES ('4e3ea1f9-761e-4888-9ac4-81efd61c2638', 'Delhaize', NULL, 'Joyn');
+INSERT INTO keycloak_group VALUES ('603ce513-8f56-4efc-8de6-400c5fbaa38a', 'Carrefour', NULL, 'FidCash');
+INSERT INTO keycloak_group VALUES ('a6ce1c4e-80d3-48b1-a861-db93f3ea7950', 'Colruyt', NULL, 'FidCash');
 
 
 --
@@ -2347,29 +2347,29 @@ INSERT INTO keycloak_role VALUES ('10f5b721-d2f7-4d52-953d-50a918b866d9', 'dd112
 INSERT INTO keycloak_role VALUES ('eea7a444-2d3f-4b46-bccd-117adcdc08c0', 'dd112d33-6fb0-4566-8966-a70d5905c056', true, '${role_manage-events}', 'manage-events', 'master', 'dd112d33-6fb0-4566-8966-a70d5905c056', NULL, false);
 INSERT INTO keycloak_role VALUES ('bae03369-0a24-4ca5-aafe-084cba142a2c', 'dd112d33-6fb0-4566-8966-a70d5905c056', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'master', 'dd112d33-6fb0-4566-8966-a70d5905c056', NULL, false);
 INSERT INTO keycloak_role VALUES ('8317ddd4-5742-42f2-a3e7-11fe53908597', 'dd112d33-6fb0-4566-8966-a70d5905c056', true, '${role_manage-authorization}', 'manage-authorization', 'master', 'dd112d33-6fb0-4566-8966-a70d5905c056', NULL, false);
-INSERT INTO keycloak_role VALUES ('3dfbfa77-87b9-4c75-a18e-9e59c9d91d4f', 'Aldi', false, NULL, 'owner', 'Aldi', NULL, 'Aldi', false);
-INSERT INTO keycloak_role VALUES ('fa815218-cd81-4597-baac-af223756575c', 'Aldi', false, '${role_offline-access}', 'offline_access', 'Aldi', NULL, 'Aldi', true);
-INSERT INTO keycloak_role VALUES ('a6dfff4f-01a8-44b6-bf19-839ed6115eb2', 'Aldi', false, NULL, 'partner', 'Aldi', NULL, 'Aldi', false);
-INSERT INTO keycloak_role VALUES ('b9ac942b-35dc-42ee-892c-84ec221c9667', 'Aldi', false, NULL, 'user', 'Aldi', NULL, 'Aldi', false);
-INSERT INTO keycloak_role VALUES ('e3b79268-dae0-4b2b-9884-a0ac61fac3d9', 'Aldi', false, '${role_uma_authorization}', 'uma_authorization', 'Aldi', NULL, 'Aldi', false);
-INSERT INTO keycloak_role VALUES ('54b33529-d22a-4bbc-960f-4afb95c84e75', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-events}', 'manage-events', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('e30d8fee-b354-4ad5-9cc8-5cb693df8fbf', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_realm-admin}', 'realm-admin', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('8288f470-023a-496b-bbbe-b2e5bb252eca', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-users}', 'view-users', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('1e14d609-0e11-400f-8a26-6d3f420358e3', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-realm}', 'view-realm', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('24591c17-e501-40c6-b40b-5bc1358aa7d5', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-events}', 'view-events', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('7b35d9a4-95c4-4107-8c1c-05bea34b6bc6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-users}', 'manage-users', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('7020121e-5a78-4c14-9066-6d39298bd4b6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_create-client}', 'create-client', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('ccf11ddb-e0c9-4792-8b28-96ec336a0609', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-clients}', 'view-clients', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('31da9c2a-ee58-48ee-9cae-b76a34e5f9f2', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-clients}', 'manage-clients', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('e4252aa5-1853-4525-ac8a-f73de00b448a', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-realm}', 'manage-realm', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('37c90ab7-3aff-401e-a66d-9c27d2bc7419', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-identity-providers}', 'view-identity-providers', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('188fc61d-19e3-46dd-b33c-faae634cae4b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_impersonation}', 'impersonation', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('2522dfa3-49b2-4ac4-b785-bbd681c2bbb6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('0dcb9cd2-5c52-4fe6-b018-d7a25052306b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-authorization}', 'manage-authorization', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('5031d0e4-2130-4bcc-ba37-8c20f9c7ec5b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-authorization}', 'view-authorization', 'Aldi', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
-INSERT INTO keycloak_role VALUES ('3963e438-62e9-4b8a-bc5a-9bfb1332c11d', 'b41ab070-1f92-4562-8f2c-965ab07138e0', true, '${role_read-token}', 'read-token', 'Aldi', 'b41ab070-1f92-4562-8f2c-965ab07138e0', NULL, false);
-INSERT INTO keycloak_role VALUES ('502baf77-40f3-4968-8a6e-8830c0fa8dcd', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, '${role_manage-account}', 'manage-account', 'Aldi', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
-INSERT INTO keycloak_role VALUES ('86c6f137-9d24-457f-90fb-97f052710b87', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, '${role_view-profile}', 'view-profile', 'Aldi', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
+INSERT INTO keycloak_role VALUES ('3dfbfa77-87b9-4c75-a18e-9e59c9d91d4f', 'Joyn', false, NULL, 'owner', 'Joyn', NULL, 'Joyn', false);
+INSERT INTO keycloak_role VALUES ('fa815218-cd81-4597-baac-af223756575c', 'Joyn', false, '${role_offline-access}', 'offline_access', 'Joyn', NULL, 'Joyn', true);
+INSERT INTO keycloak_role VALUES ('a6dfff4f-01a8-44b6-bf19-839ed6115eb2', 'Joyn', false, NULL, 'partner', 'Joyn', NULL, 'Joyn', false);
+INSERT INTO keycloak_role VALUES ('b9ac942b-35dc-42ee-892c-84ec221c9667', 'Joyn', false, NULL, 'user', 'Joyn', NULL, 'Joyn', false);
+INSERT INTO keycloak_role VALUES ('e3b79268-dae0-4b2b-9884-a0ac61fac3d9', 'Joyn', false, '${role_uma_authorization}', 'uma_authorization', 'Joyn', NULL, 'Joyn', false);
+INSERT INTO keycloak_role VALUES ('54b33529-d22a-4bbc-960f-4afb95c84e75', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-events}', 'manage-events', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('e30d8fee-b354-4ad5-9cc8-5cb693df8fbf', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_realm-admin}', 'realm-admin', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('8288f470-023a-496b-bbbe-b2e5bb252eca', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-users}', 'view-users', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('1e14d609-0e11-400f-8a26-6d3f420358e3', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-realm}', 'view-realm', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('24591c17-e501-40c6-b40b-5bc1358aa7d5', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-events}', 'view-events', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('7b35d9a4-95c4-4107-8c1c-05bea34b6bc6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-users}', 'manage-users', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('7020121e-5a78-4c14-9066-6d39298bd4b6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_create-client}', 'create-client', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('ccf11ddb-e0c9-4792-8b28-96ec336a0609', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-clients}', 'view-clients', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('31da9c2a-ee58-48ee-9cae-b76a34e5f9f2', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-clients}', 'manage-clients', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('e4252aa5-1853-4525-ac8a-f73de00b448a', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-realm}', 'manage-realm', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('37c90ab7-3aff-401e-a66d-9c27d2bc7419', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-identity-providers}', 'view-identity-providers', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('188fc61d-19e3-46dd-b33c-faae634cae4b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_impersonation}', 'impersonation', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('2522dfa3-49b2-4ac4-b785-bbd681c2bbb6', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('0dcb9cd2-5c52-4fe6-b018-d7a25052306b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_manage-authorization}', 'manage-authorization', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('5031d0e4-2130-4bcc-ba37-8c20f9c7ec5b', '8f8d9417-ed6c-481a-bac6-f2735a298156', true, '${role_view-authorization}', 'view-authorization', 'Joyn', '8f8d9417-ed6c-481a-bac6-f2735a298156', NULL, false);
+INSERT INTO keycloak_role VALUES ('3963e438-62e9-4b8a-bc5a-9bfb1332c11d', 'b41ab070-1f92-4562-8f2c-965ab07138e0', true, '${role_read-token}', 'read-token', 'Joyn', 'b41ab070-1f92-4562-8f2c-965ab07138e0', NULL, false);
+INSERT INTO keycloak_role VALUES ('502baf77-40f3-4968-8a6e-8830c0fa8dcd', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, '${role_manage-account}', 'manage-account', 'Joyn', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
+INSERT INTO keycloak_role VALUES ('86c6f137-9d24-457f-90fb-97f052710b87', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, '${role_view-profile}', 'view-profile', 'Joyn', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
 INSERT INTO keycloak_role VALUES ('8dd17049-c17b-4b19-b565-256dc07740c7', 'dd112d33-6fb0-4566-8966-a70d5905c056', true, '${role_impersonation}', 'impersonation', 'master', 'dd112d33-6fb0-4566-8966-a70d5905c056', NULL, false);
 INSERT INTO keycloak_role VALUES ('d14d6329-1aff-488c-98fe-da6f922a330c', '9b1705ee-b907-443e-9fd9-568448f312d3', true, '${role_create-client}', 'create-client', 'master', '9b1705ee-b907-443e-9fd9-568448f312d3', NULL, false);
 INSERT INTO keycloak_role VALUES ('3bb793da-b479-4456-a6c5-e17a6198a042', '9b1705ee-b907-443e-9fd9-568448f312d3', true, '${role_view-realm}', 'view-realm', 'master', '9b1705ee-b907-443e-9fd9-568448f312d3', NULL, false);
@@ -2421,34 +2421,34 @@ INSERT INTO keycloak_role VALUES ('43feedfe-2b85-4c8f-b651-c6089753df44', '10211
 INSERT INTO keycloak_role VALUES ('284d4171-aeca-4286-b373-8eb9fc2609ed', '102112b4-0529-46c4-afc3-5dded7a42ff9', true, '${role_manage-events}', 'manage-events', 'master', '102112b4-0529-46c4-afc3-5dded7a42ff9', NULL, false);
 INSERT INTO keycloak_role VALUES ('4bc18399-7574-4990-9405-8458ca6e93ac', '102112b4-0529-46c4-afc3-5dded7a42ff9', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'master', '102112b4-0529-46c4-afc3-5dded7a42ff9', NULL, false);
 INSERT INTO keycloak_role VALUES ('534794c8-bd4c-4a2f-9dd9-f6b3bccca790', '102112b4-0529-46c4-afc3-5dded7a42ff9', true, '${role_manage-authorization}', 'manage-authorization', 'master', '102112b4-0529-46c4-afc3-5dded7a42ff9', NULL, false);
-INSERT INTO keycloak_role VALUES ('65cc597c-a172-4db4-9597-fa3c79b5ec10', 'Colruyt', false, NULL, 'user', 'Colruyt', NULL, 'Colruyt', false);
-INSERT INTO keycloak_role VALUES ('ff02f592-f2d9-4748-8f3b-78c6ecea6f08', 'Colruyt', false, NULL, 'owner', 'Colruyt', NULL, 'Colruyt', false);
-INSERT INTO keycloak_role VALUES ('d60ee4da-cc16-4b12-829a-42feabd04aaf', 'Colruyt', false, '${role_uma_authorization}', 'uma_authorization', 'Colruyt', NULL, 'Colruyt', false);
-INSERT INTO keycloak_role VALUES ('5ebcc062-ca37-43ba-bb07-421340d13d5d', 'Colruyt', false, NULL, 'partner', 'Colruyt', NULL, 'Colruyt', false);
-INSERT INTO keycloak_role VALUES ('4779830c-ad5a-4848-b4cd-599c580255a1', 'Colruyt', false, '${role_offline-access}', 'offline_access', 'Colruyt', NULL, 'Colruyt', true);
-INSERT INTO keycloak_role VALUES ('78d83a83-c469-413c-b0f4-509e1b5cb9f7', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_realm-admin}', 'realm-admin', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('9b5b9465-81e5-4527-b748-bb576d991dd2', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('e0ec5a2d-61c0-4869-a7aa-63a57aa8d179', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-users}', 'manage-users', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('2034fb26-c6d5-437d-9422-e8cb5c7c3cdb', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_create-client}', 'create-client', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('3a51e8db-95c1-4894-8c19-04ed30fceec2', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-clients}', 'view-clients', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('c9de5732-8ba5-4ce6-9393-e3f802e4b3cc', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-users}', 'view-users', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('f5ee24c7-1dfa-4a23-b1e3-9bc041d5601e', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-clients}', 'manage-clients', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('e1b21877-5702-48dd-a68a-2cdf71dc735b', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_impersonation}', 'impersonation', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('2f67cd22-d4db-41bd-aa7e-77fd99de1c2f', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-events}', 'manage-events', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('35181378-b4d5-4ef1-90ce-00d947ddf48f', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-realm}', 'manage-realm', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('83cf4abf-1a0a-4f7a-8e13-7f3f0306fc17', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-realm}', 'view-realm', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('eca00f5a-b3b9-478c-b978-0137b67be51b', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-identity-providers}', 'view-identity-providers', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('7647de7e-dbde-44c6-8c6f-0d0f21e6f010', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-authorization}', 'view-authorization', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('03ca8ddd-6f25-4d05-9757-df54ac504fa1', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-authorization}', 'manage-authorization', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('71a185bf-c31d-43dd-9345-00ee164e4507', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-events}', 'view-events', 'Colruyt', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
-INSERT INTO keycloak_role VALUES ('3c907ccd-57ae-4a18-af0c-e27663937d49', '6a832b8b-e8e6-46f6-8a99-85e147e0448a', true, '${role_read-token}', 'read-token', 'Colruyt', '6a832b8b-e8e6-46f6-8a99-85e147e0448a', NULL, false);
-INSERT INTO keycloak_role VALUES ('88eac625-ce82-4e85-b60a-eec0c8ab2a50', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, '${role_view-profile}', 'view-profile', 'Colruyt', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
-INSERT INTO keycloak_role VALUES ('44b6498c-c088-4bf6-a022-7f7e980ed7d7', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, '${role_manage-account}', 'manage-account', 'Colruyt', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
+INSERT INTO keycloak_role VALUES ('65cc597c-a172-4db4-9597-fa3c79b5ec10', 'FidCash', false, NULL, 'user', 'FidCash', NULL, 'FidCash', false);
+INSERT INTO keycloak_role VALUES ('ff02f592-f2d9-4748-8f3b-78c6ecea6f08', 'FidCash', false, NULL, 'owner', 'FidCash', NULL, 'FidCash', false);
+INSERT INTO keycloak_role VALUES ('d60ee4da-cc16-4b12-829a-42feabd04aaf', 'FidCash', false, '${role_uma_authorization}', 'uma_authorization', 'FidCash', NULL, 'FidCash', false);
+INSERT INTO keycloak_role VALUES ('5ebcc062-ca37-43ba-bb07-421340d13d5d', 'FidCash', false, NULL, 'partner', 'FidCash', NULL, 'FidCash', false);
+INSERT INTO keycloak_role VALUES ('4779830c-ad5a-4848-b4cd-599c580255a1', 'FidCash', false, '${role_offline-access}', 'offline_access', 'FidCash', NULL, 'FidCash', true);
+INSERT INTO keycloak_role VALUES ('78d83a83-c469-413c-b0f4-509e1b5cb9f7', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_realm-admin}', 'realm-admin', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('9b5b9465-81e5-4527-b748-bb576d991dd2', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-identity-providers}', 'manage-identity-providers', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('e0ec5a2d-61c0-4869-a7aa-63a57aa8d179', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-users}', 'manage-users', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('2034fb26-c6d5-437d-9422-e8cb5c7c3cdb', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_create-client}', 'create-client', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('3a51e8db-95c1-4894-8c19-04ed30fceec2', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-clients}', 'view-clients', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('c9de5732-8ba5-4ce6-9393-e3f802e4b3cc', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-users}', 'view-users', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('f5ee24c7-1dfa-4a23-b1e3-9bc041d5601e', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-clients}', 'manage-clients', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('e1b21877-5702-48dd-a68a-2cdf71dc735b', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_impersonation}', 'impersonation', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('2f67cd22-d4db-41bd-aa7e-77fd99de1c2f', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-events}', 'manage-events', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('35181378-b4d5-4ef1-90ce-00d947ddf48f', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-realm}', 'manage-realm', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('83cf4abf-1a0a-4f7a-8e13-7f3f0306fc17', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-realm}', 'view-realm', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('eca00f5a-b3b9-478c-b978-0137b67be51b', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-identity-providers}', 'view-identity-providers', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('7647de7e-dbde-44c6-8c6f-0d0f21e6f010', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-authorization}', 'view-authorization', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('03ca8ddd-6f25-4d05-9757-df54ac504fa1', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_manage-authorization}', 'manage-authorization', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('71a185bf-c31d-43dd-9345-00ee164e4507', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', true, '${role_view-events}', 'view-events', 'FidCash', '1de8d9fb-fb3f-4671-bd6a-148ad6cfd9d5', NULL, false);
+INSERT INTO keycloak_role VALUES ('3c907ccd-57ae-4a18-af0c-e27663937d49', '6a832b8b-e8e6-46f6-8a99-85e147e0448a', true, '${role_read-token}', 'read-token', 'FidCash', '6a832b8b-e8e6-46f6-8a99-85e147e0448a', NULL, false);
+INSERT INTO keycloak_role VALUES ('88eac625-ce82-4e85-b60a-eec0c8ab2a50', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, '${role_view-profile}', 'view-profile', 'FidCash', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
+INSERT INTO keycloak_role VALUES ('44b6498c-c088-4bf6-a022-7f7e980ed7d7', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, '${role_manage-account}', 'manage-account', 'FidCash', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
 INSERT INTO keycloak_role VALUES ('70afd8bd-cec3-485a-ba8a-0923b0b6fbad', '102112b4-0529-46c4-afc3-5dded7a42ff9', true, '${role_impersonation}', 'impersonation', 'master', '102112b4-0529-46c4-afc3-5dded7a42ff9', NULL, false);
 INSERT INTO keycloak_role VALUES ('eb8c248a-0e0f-43eb-ac3d-0fade93c091f', 'd19d260c-bfd9-4375-b4f4-c9b7c6188289', true, NULL, 'manage-account-links', 'master', 'd19d260c-bfd9-4375-b4f4-c9b7c6188289', NULL, false);
-INSERT INTO keycloak_role VALUES ('1f117d24-bb03-4b10-b319-e6c1e1a2cde5', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, NULL, 'manage-account-links', 'Aldi', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
+INSERT INTO keycloak_role VALUES ('1f117d24-bb03-4b10-b319-e6c1e1a2cde5', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, NULL, 'manage-account-links', 'Joyn', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
 INSERT INTO keycloak_role VALUES ('426fd4f3-83bf-499f-b7b9-223a76846317', '4dd5f99f-18cf-4f4f-ad84-bb6a0f566d15', true, NULL, 'manage-account-links', 'fa758415-6fe8-4313-b599-643292361e3d', '4dd5f99f-18cf-4f4f-ad84-bb6a0f566d15', NULL, false);
-INSERT INTO keycloak_role VALUES ('99742840-92ca-4b33-894e-dc29354e6ef2', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, NULL, 'manage-account-links', 'Colruyt', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
+INSERT INTO keycloak_role VALUES ('99742840-92ca-4b33-894e-dc29354e6ef2', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, NULL, 'manage-account-links', 'FidCash', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
 
 
 --
@@ -2666,6 +2666,9 @@ INSERT INTO protocol_mapper VALUES ('afc6c1ae-8ea2-4da4-a753-946d3653b87f', 'use
 INSERT INTO protocol_mapper VALUES ('40f0cf2d-b53a-41b4-bc65-62f0234a2821', 'family name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${familyName}', 'cf2c62a5-c21b-44e3-a9a3-2b88fad2992f', NULL);
 INSERT INTO protocol_mapper VALUES ('bc85be73-18e1-4120-9e1a-935c8d17673c', 'given name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${givenName}', 'cf2c62a5-c21b-44e3-a9a3-2b88fad2992f', NULL);
 INSERT INTO protocol_mapper VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637', 'email', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${email}', 'cf2c62a5-c21b-44e3-a9a3-2b88fad2992f', NULL);
+INSERT INTO protocol_mapper VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'Client ID', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
+INSERT INTO protocol_mapper VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'Client Host', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
+INSERT INTO protocol_mapper VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'Client IP Address', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
 
 
 --
@@ -3588,6 +3591,21 @@ INSERT INTO protocol_mapper_config VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637
 INSERT INTO protocol_mapper_config VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637', 'true', 'access.token.claim');
 INSERT INTO protocol_mapper_config VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637', 'email', 'claim.name');
 INSERT INTO protocol_mapper_config VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'clientId', 'user.session.note');
+INSERT INTO protocol_mapper_config VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'clientId', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'clientHost', 'user.session.note');
+INSERT INTO protocol_mapper_config VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'clientHost', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'clientAddress', 'user.session.note');
+INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'clientAddress', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'String', 'jsonType.label');
 
 
 --
@@ -3596,8 +3614,8 @@ INSERT INTO protocol_mapper_config VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637
 
 INSERT INTO realm VALUES ('master', 60, 300, 60, NULL, NULL, NULL, true, false, 0, NULL, 'master', 0, 'hashIterations(20000)', false, false, false, false, 'EXTERNAL', 1800, 36000, false, false, '662f42cf-dc6b-461d-9633-d8384f210692', 1800, false, NULL, false, false, false, false, 0, 1, 30, 6, 'HmacSHA1', 'totp', 'f0ebf238-55ad-48b8-9a8e-93a023274534', '362ce71b-99ea-4d39-9e07-829122f0eb26', '0361b6f0-5b34-4646-9998-440f70d3e3fd', '67fee0b9-868f-496e-87e1-7c2f05fca317', '23261c24-99f4-4ce0-9c53-321c7acc9b9c', 2592000, false, 900, true, false);
 INSERT INTO realm VALUES ('fa758415-6fe8-4313-b599-643292361e3d', 60, 300, 240, NULL, NULL, NULL, true, false, 0, NULL, 'apiman', 0, 'hashIterations(20000)', true, false, false, false, 'EXTERNAL', 600, 36000, false, false, '9b1705ee-b907-443e-9fd9-568448f312d3', 1800, false, NULL, false, false, false, false, 0, 1, 30, 6, 'HmacSHA1', 'totp', 'bac93b82-ef24-47a3-a20a-3bce871303c4', 'b3957b14-8be3-461e-83a6-cad78fa78d02', '5ced2963-d2a9-4a1d-b5f7-0764ceb9f3a2', '8cc9dbd4-272c-4dee-9b90-34f896827a7d', 'caaf11ba-a8b4-4398-8895-7629eecd1e48', 2592000, false, 900, true, false);
-INSERT INTO realm VALUES ('Aldi', 60, 300, 300, NULL, NULL, NULL, true, false, 0, NULL, 'Aldi', 0, 'hashIterations(20000)', true, false, false, false, 'EXTERNAL', 1800, 36000, false, false, 'dd112d33-6fb0-4566-8966-a70d5905c056', 1800, false, NULL, false, false, false, false, 0, 1, 30, 6, 'HmacSHA1', 'totp', 'dde585ff-0e30-4a14-af37-d6fad287fd26', '1592898e-e256-40cf-8117-bf08a175cd11', 'a5645acd-ae62-4d8a-abca-0eca8df24496', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2592000, false, 900, true, false);
-INSERT INTO realm VALUES ('Colruyt', 60, 86400, 300, 'keycloak', 'keycloak', 'keycloak', true, false, 0, 'keycloak', 'Colruyt', 0, 'hashIterations and regexPattern(((^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,!\\@#\$%\^&\*\(\)_+\|~\-=`{}\[\]:";''<>?\/])(.{8,})$)|(^.{20,}$)))', true, false, true, false, 'EXTERNAL', 1800, 36000, false, true, '102112b4-0529-46c4-afc3-5dded7a42ff9', 1800, true, 'en', false, false, false, false, 0, 1, 30, 6, 'HmacSHA512', 'totp', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', '23ca7c0f-5232-428a-a608-eda42c381449', 'fb37f684-1563-4fa7-a3ff-f592530db418', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2592000, false, 900, true, false);
+INSERT INTO realm VALUES ('Joyn', 60, 300, 300, NULL, NULL, NULL, true, false, 0, NULL, 'Aldi', 0, 'hashIterations(20000)', true, false, false, false, 'EXTERNAL', 1800, 36000, false, false, 'dd112d33-6fb0-4566-8966-a70d5905c056', 1800, false, NULL, false, false, false, false, 0, 1, 30, 6, 'HmacSHA1', 'totp', 'dde585ff-0e30-4a14-af37-d6fad287fd26', '1592898e-e256-40cf-8117-bf08a175cd11', 'a5645acd-ae62-4d8a-abca-0eca8df24496', '5e90527c-c7f7-42f6-b59b-9f52f4d1b3ef', '218dc39b-958a-44b5-b972-178aa7fa2d77', 2592000, false, 900, true, false);
+INSERT INTO realm VALUES ('FidCash', 60, 86400, 300, 'keycloak', 'keycloak', 'keycloak', true, false, 0, 'keycloak', 'Colruyt', 0, 'hashIterations and regexPattern(((^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,!\\@#\$%\^&\*\(\)_+\|~\-=`{}\[\]:";''<>?\/])(.{8,})$)|(^.{20,}$)))', true, false, true, false, 'EXTERNAL', 1800, 36000, false, true, '102112b4-0529-46c4-afc3-5dded7a42ff9', 1800, true, 'en', false, false, false, false, 0, 1, 30, 6, 'HmacSHA512', 'totp', 'fb8b4160-f51c-4652-bcf6-accd50142f7f', '23ca7c0f-5232-428a-a608-eda42c381449', 'fb37f684-1563-4fa7-a3ff-f592530db418', 'de65c6b1-4896-4b0a-b799-6694a0715c0a', '0ad7afbf-8ac4-44ca-a2cd-e02b53804d69', 2592000, false, 900, true, false);
 
 
 --
@@ -3616,16 +3634,16 @@ INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'master');
 INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'master');
 INSERT INTO realm_attribute VALUES ('displayName', 'Keycloak', 'master');
 INSERT INTO realm_attribute VALUES ('displayNameHtml', '<div class="kc-logo-text"><span>Keycloak</span></div>', 'master');
-INSERT INTO realm_attribute VALUES ('_browser_header.xContentTypeOptions', 'nosniff', 'Aldi');
-INSERT INTO realm_attribute VALUES ('_browser_header.xFrameOptions', 'SAMEORIGIN', 'Aldi');
-INSERT INTO realm_attribute VALUES ('_browser_header.contentSecurityPolicy', 'frame-src ''self''', 'Aldi');
-INSERT INTO realm_attribute VALUES ('bruteForceProtected', 'false', 'Aldi');
-INSERT INTO realm_attribute VALUES ('maxFailureWaitSeconds', '900', 'Aldi');
-INSERT INTO realm_attribute VALUES ('minimumQuickLoginWaitSeconds', '60', 'Aldi');
-INSERT INTO realm_attribute VALUES ('waitIncrementSeconds', '60', 'Aldi');
-INSERT INTO realm_attribute VALUES ('quickLoginCheckMilliSeconds', '1000', 'Aldi');
-INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'Aldi');
-INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'Aldi');
+INSERT INTO realm_attribute VALUES ('_browser_header.xContentTypeOptions', 'nosniff', 'Joyn');
+INSERT INTO realm_attribute VALUES ('_browser_header.xFrameOptions', 'SAMEORIGIN', 'Joyn');
+INSERT INTO realm_attribute VALUES ('_browser_header.contentSecurityPolicy', 'frame-src ''self''', 'Joyn');
+INSERT INTO realm_attribute VALUES ('bruteForceProtected', 'false', 'Joyn');
+INSERT INTO realm_attribute VALUES ('maxFailureWaitSeconds', '900', 'Joyn');
+INSERT INTO realm_attribute VALUES ('minimumQuickLoginWaitSeconds', '60', 'Joyn');
+INSERT INTO realm_attribute VALUES ('waitIncrementSeconds', '60', 'Joyn');
+INSERT INTO realm_attribute VALUES ('quickLoginCheckMilliSeconds', '1000', 'Joyn');
+INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'Joyn');
+INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'Joyn');
 INSERT INTO realm_attribute VALUES ('_browser_header.xContentTypeOptions', 'nosniff', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO realm_attribute VALUES ('_browser_header.xFrameOptions', 'SAMEORIGIN', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO realm_attribute VALUES ('_browser_header.contentSecurityPolicy', 'frame-src ''self''', 'fa758415-6fe8-4313-b599-643292361e3d');
@@ -3637,25 +3655,25 @@ INSERT INTO realm_attribute VALUES ('quickLoginCheckMilliSeconds', '1000', 'fa75
 INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO realm_attribute VALUES ('displayNameHtml', '<div class="kc-logo-text"><span>Keycloak & Apiman Quickstart</span></div>', 'fa758415-6fe8-4313-b599-643292361e3d');
-INSERT INTO realm_attribute VALUES ('_browser_header.xContentTypeOptions', 'nosniff', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('_browser_header.xFrameOptions', 'SAMEORIGIN', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('_browser_header.contentSecurityPolicy', 'frame-src ''self''', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('bruteForceProtected', 'false', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('maxFailureWaitSeconds', '900', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('minimumQuickLoginWaitSeconds', '60', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('waitIncrementSeconds', '60', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('quickLoginCheckMilliSeconds', '1000', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'Colruyt');
+INSERT INTO realm_attribute VALUES ('_browser_header.xContentTypeOptions', 'nosniff', 'FidCash');
+INSERT INTO realm_attribute VALUES ('_browser_header.xFrameOptions', 'SAMEORIGIN', 'FidCash');
+INSERT INTO realm_attribute VALUES ('_browser_header.contentSecurityPolicy', 'frame-src ''self''', 'FidCash');
+INSERT INTO realm_attribute VALUES ('bruteForceProtected', 'false', 'FidCash');
+INSERT INTO realm_attribute VALUES ('maxFailureWaitSeconds', '900', 'FidCash');
+INSERT INTO realm_attribute VALUES ('minimumQuickLoginWaitSeconds', '60', 'FidCash');
+INSERT INTO realm_attribute VALUES ('waitIncrementSeconds', '60', 'FidCash');
+INSERT INTO realm_attribute VALUES ('quickLoginCheckMilliSeconds', '1000', 'FidCash');
+INSERT INTO realm_attribute VALUES ('maxDeltaTimeSeconds', '43200', 'FidCash');
+INSERT INTO realm_attribute VALUES ('failureFactor', '30', 'FidCash');
 INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'master');
 INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'master');
-INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'Aldi');
-INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'Aldi');
+INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'Joyn');
+INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'Joyn');
 INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'fa758415-6fe8-4313-b599-643292361e3d');
 INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'fa758415-6fe8-4313-b599-643292361e3d');
-INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'Colruyt');
-INSERT INTO realm_attribute VALUES ('displayName', 'Aldi', 'Aldi');
+INSERT INTO realm_attribute VALUES ('_browser_header.xXSSProtection', '1; mode=block', 'FidCash');
+INSERT INTO realm_attribute VALUES ('_browser_header.xRobotsTag', 'none', 'FidCash');
+INSERT INTO realm_attribute VALUES ('displayName', 'Aldi', 'Joyn');
 
 
 --
@@ -3670,13 +3688,13 @@ INSERT INTO realm_attribute VALUES ('displayName', 'Aldi', 'Aldi');
 
 INSERT INTO realm_default_roles VALUES ('master', 'c2f327cc-12b7-4388-8641-1ea36f94ca48');
 INSERT INTO realm_default_roles VALUES ('master', 'af5f4188-9dbd-49b0-bfb2-ffabb9652c79');
-INSERT INTO realm_default_roles VALUES ('Aldi', 'fa815218-cd81-4597-baac-af223756575c');
-INSERT INTO realm_default_roles VALUES ('Aldi', 'e3b79268-dae0-4b2b-9884-a0ac61fac3d9');
+INSERT INTO realm_default_roles VALUES ('Joyn', 'fa815218-cd81-4597-baac-af223756575c');
+INSERT INTO realm_default_roles VALUES ('Joyn', 'e3b79268-dae0-4b2b-9884-a0ac61fac3d9');
 INSERT INTO realm_default_roles VALUES ('fa758415-6fe8-4313-b599-643292361e3d', '8c9f575b-f95a-469d-b3ae-54524b93cec6');
 INSERT INTO realm_default_roles VALUES ('fa758415-6fe8-4313-b599-643292361e3d', '05a65ccb-6b36-4db5-a4f7-ed1a9b5ed2b6');
 INSERT INTO realm_default_roles VALUES ('fa758415-6fe8-4313-b599-643292361e3d', 'c2d86a8e-7c89-4587-985b-8cc673ec9f19');
-INSERT INTO realm_default_roles VALUES ('Colruyt', '4779830c-ad5a-4848-b4cd-599c580255a1');
-INSERT INTO realm_default_roles VALUES ('Colruyt', 'd60ee4da-cc16-4b12-829a-42feabd04aaf');
+INSERT INTO realm_default_roles VALUES ('FidCash', '4779830c-ad5a-4848-b4cd-599c580255a1');
+INSERT INTO realm_default_roles VALUES ('FidCash', 'd60ee4da-cc16-4b12-829a-42feabd04aaf');
 
 
 --
@@ -3691,8 +3709,8 @@ INSERT INTO realm_default_roles VALUES ('Colruyt', 'd60ee4da-cc16-4b12-829a-42fe
 
 INSERT INTO realm_events_listeners VALUES ('master', 'jboss-logging');
 INSERT INTO realm_events_listeners VALUES ('fa758415-6fe8-4313-b599-643292361e3d', 'jboss-logging');
-INSERT INTO realm_events_listeners VALUES ('Aldi', 'jboss-logging');
-INSERT INTO realm_events_listeners VALUES ('Colruyt', 'jboss-logging');
+INSERT INTO realm_events_listeners VALUES ('Joyn', 'jboss-logging');
+INSERT INTO realm_events_listeners VALUES ('FidCash', 'jboss-logging');
 
 
 --
@@ -3700,30 +3718,30 @@ INSERT INTO realm_events_listeners VALUES ('Colruyt', 'jboss-logging');
 --
 
 INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'master');
-INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'Aldi');
+INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'Joyn');
 INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'fa758415-6fe8-4313-b599-643292361e3d');
-INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'Colruyt');
+INSERT INTO realm_required_credential VALUES ('password', 'password', true, true, 'FidCash');
 
 
 --
 -- Data for Name: realm_smtp_config; Type: TABLE DATA; Schema: public; Owner: keycloak
 --
 
-INSERT INTO realm_smtp_config VALUES ('Colruyt', '%Hr05fx2UB^v', 'password');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', 'true', 'auth');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', '465', 'port');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', 'smtp.gmail.com', 'host');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', 'iamtestprojectyo@gmail.com', 'from');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', 'true', 'ssl');
-INSERT INTO realm_smtp_config VALUES ('Colruyt', 'iamtestprojectyo@gmail.com', 'user');
+INSERT INTO realm_smtp_config VALUES ('FidCash', '%Hr05fx2UB^v', 'password');
+INSERT INTO realm_smtp_config VALUES ('FidCash', 'true', 'auth');
+INSERT INTO realm_smtp_config VALUES ('FidCash', '465', 'port');
+INSERT INTO realm_smtp_config VALUES ('FidCash', 'smtp.gmail.com', 'host');
+INSERT INTO realm_smtp_config VALUES ('FidCash', 'iamtestprojectyo@gmail.com', 'from');
+INSERT INTO realm_smtp_config VALUES ('FidCash', 'true', 'ssl');
+INSERT INTO realm_smtp_config VALUES ('FidCash', 'iamtestprojectyo@gmail.com', 'user');
 
 
 --
 -- Data for Name: realm_supported_locales; Type: TABLE DATA; Schema: public; Owner: keycloak
 --
 
-INSERT INTO realm_supported_locales VALUES ('Colruyt', 'en');
-INSERT INTO realm_supported_locales VALUES ('Colruyt', 'fr');
+INSERT INTO realm_supported_locales VALUES ('FidCash', 'en');
+INSERT INTO realm_supported_locales VALUES ('FidCash', 'fr');
 
 
 --
@@ -3765,21 +3783,21 @@ INSERT INTO required_action_provider VALUES ('52cd8b99-a074-4213-ba6d-4990bc2f99
 INSERT INTO required_action_provider VALUES ('a82b1bc3-7b51-48e2-b7cd-df04db66221e', 'CONFIGURE_TOTP', 'Configure OTP', 'master', true, false, 'CONFIGURE_TOTP');
 INSERT INTO required_action_provider VALUES ('7895d7ad-171b-4e82-9b8b-bf58ebf65334', 'UPDATE_PASSWORD', 'Update Password', 'master', true, false, 'UPDATE_PASSWORD');
 INSERT INTO required_action_provider VALUES ('b36b8061-e932-4c8d-9a20-6b8f508bbd2f', 'terms_and_conditions', 'Terms and Conditions', 'master', false, false, 'terms_and_conditions');
-INSERT INTO required_action_provider VALUES ('7ed5931a-8d06-421f-ae34-14ea4706b643', 'CONFIGURE_TOTP', 'Configure OTP', 'Aldi', true, false, 'CONFIGURE_TOTP');
-INSERT INTO required_action_provider VALUES ('6e4cf26e-f46d-4b84-b11b-bc94c090ea61', 'UPDATE_PASSWORD', 'Update Password', 'Aldi', true, false, 'UPDATE_PASSWORD');
-INSERT INTO required_action_provider VALUES ('d7ed69a3-43db-4fed-b597-30ef5c0e3c1a', 'UPDATE_PROFILE', 'Update Profile', 'Aldi', true, false, 'UPDATE_PROFILE');
-INSERT INTO required_action_provider VALUES ('ab641883-5b15-4a19-8d5e-997507e0cf82', 'VERIFY_EMAIL', 'Verify Email', 'Aldi', true, false, 'VERIFY_EMAIL');
-INSERT INTO required_action_provider VALUES ('d5203c5d-b318-4efd-bc14-588fe0f225d6', 'terms_and_conditions', 'Terms and Conditions', 'Aldi', false, false, 'terms_and_conditions');
+INSERT INTO required_action_provider VALUES ('7ed5931a-8d06-421f-ae34-14ea4706b643', 'CONFIGURE_TOTP', 'Configure OTP', 'Joyn', true, false, 'CONFIGURE_TOTP');
+INSERT INTO required_action_provider VALUES ('6e4cf26e-f46d-4b84-b11b-bc94c090ea61', 'UPDATE_PASSWORD', 'Update Password', 'Joyn', true, false, 'UPDATE_PASSWORD');
+INSERT INTO required_action_provider VALUES ('d7ed69a3-43db-4fed-b597-30ef5c0e3c1a', 'UPDATE_PROFILE', 'Update Profile', 'Joyn', true, false, 'UPDATE_PROFILE');
+INSERT INTO required_action_provider VALUES ('ab641883-5b15-4a19-8d5e-997507e0cf82', 'VERIFY_EMAIL', 'Verify Email', 'Joyn', true, false, 'VERIFY_EMAIL');
+INSERT INTO required_action_provider VALUES ('d5203c5d-b318-4efd-bc14-588fe0f225d6', 'terms_and_conditions', 'Terms and Conditions', 'Joyn', false, false, 'terms_and_conditions');
 INSERT INTO required_action_provider VALUES ('195165ab-c2b9-41bf-bb78-b22b86dfe6c5', 'VERIFY_EMAIL', 'Verify Email', 'fa758415-6fe8-4313-b599-643292361e3d', true, false, 'VERIFY_EMAIL');
 INSERT INTO required_action_provider VALUES ('9dd59e54-ece1-42d1-8c0f-9a79f1cdfe9c', 'UPDATE_PROFILE', 'Update Profile', 'fa758415-6fe8-4313-b599-643292361e3d', true, false, 'UPDATE_PROFILE');
 INSERT INTO required_action_provider VALUES ('bb81db10-20e4-4cf7-a5ad-a4f6e4a066cb', 'CONFIGURE_TOTP', 'Configure OTP', 'fa758415-6fe8-4313-b599-643292361e3d', true, false, 'CONFIGURE_TOTP');
 INSERT INTO required_action_provider VALUES ('05484398-7ada-48d6-a426-22145c07431b', 'UPDATE_PASSWORD', 'Update Password', 'fa758415-6fe8-4313-b599-643292361e3d', true, false, 'UPDATE_PASSWORD');
 INSERT INTO required_action_provider VALUES ('1346210e-fcac-4983-b108-543bb4cc31de', 'terms_and_conditions', 'Terms and Conditions', 'fa758415-6fe8-4313-b599-643292361e3d', false, false, 'terms_and_conditions');
-INSERT INTO required_action_provider VALUES ('0623a654-a9b3-45c1-8f53-6c6be0c83c97', 'CONFIGURE_TOTP', 'Configure OTP', 'Colruyt', true, false, 'CONFIGURE_TOTP');
-INSERT INTO required_action_provider VALUES ('7c1240c7-2e3b-4111-bc8d-90a8ff4f2513', 'UPDATE_PASSWORD', 'Update Password', 'Colruyt', true, false, 'UPDATE_PASSWORD');
-INSERT INTO required_action_provider VALUES ('7bdd0093-c43c-40e9-920b-b366388d8015', 'UPDATE_PROFILE', 'Update Profile', 'Colruyt', true, false, 'UPDATE_PROFILE');
-INSERT INTO required_action_provider VALUES ('602b9c0c-7fff-4c40-adff-39c8b8d80e16', 'VERIFY_EMAIL', 'Verify Email', 'Colruyt', true, false, 'VERIFY_EMAIL');
-INSERT INTO required_action_provider VALUES ('057c9944-70f7-4835-a438-1dd5ffba7ded', 'terms_and_conditions', 'Terms and Conditions', 'Colruyt', false, false, 'terms_and_conditions');
+INSERT INTO required_action_provider VALUES ('0623a654-a9b3-45c1-8f53-6c6be0c83c97', 'CONFIGURE_TOTP', 'Configure OTP', 'FidCash', true, false, 'CONFIGURE_TOTP');
+INSERT INTO required_action_provider VALUES ('7c1240c7-2e3b-4111-bc8d-90a8ff4f2513', 'UPDATE_PASSWORD', 'Update Password', 'FidCash', true, false, 'UPDATE_PASSWORD');
+INSERT INTO required_action_provider VALUES ('7bdd0093-c43c-40e9-920b-b366388d8015', 'UPDATE_PROFILE', 'Update Profile', 'FidCash', true, false, 'UPDATE_PROFILE');
+INSERT INTO required_action_provider VALUES ('602b9c0c-7fff-4c40-adff-39c8b8d80e16', 'VERIFY_EMAIL', 'Verify Email', 'FidCash', true, false, 'VERIFY_EMAIL');
+INSERT INTO required_action_provider VALUES ('057c9944-70f7-4835-a438-1dd5ffba7ded', 'terms_and_conditions', 'Terms and Conditions', 'FidCash', false, false, 'terms_and_conditions');
 
 
 --
@@ -3879,17 +3897,18 @@ INSERT INTO user_attribute VALUES ('locale', 'en', '564b4e34-db96-4e3e-8aa6-36a4
 -- Data for Name: user_entity; Type: TABLE DATA; Schema: public; Owner: keycloak
 --
 
-INSERT INTO user_entity VALUES ('32358881-30ad-4438-96bd-bf8ce355c3c3', NULL, '04b7bfb7-e8c5-43e8-b56f-316c9a0df49f', false, true, NULL, NULL, NULL, 'Aldi', 'omer owner', NULL, NULL);
-INSERT INTO user_entity VALUES ('f06239ea-7b23-4947-b7a2-ed860ab663a1', NULL, 'b7273c1d-6282-4412-a53a-4fd456b61852', false, true, NULL, NULL, NULL, 'Aldi', 'patricia partner', NULL, NULL);
-INSERT INTO user_entity VALUES ('cdc2a83b-1c36-4a13-854c-ed152c5f6f33', NULL, '03340128-877e-4fce-aaa4-86d3e196560c', false, true, NULL, NULL, NULL, 'Aldi', 'pauline partner', NULL, NULL);
-INSERT INTO user_entity VALUES ('95f05f01-0a98-4501-a637-5340add5db93', NULL, '8b1a57b4-9799-40f8-b8d5-04327475ced4', false, true, NULL, NULL, NULL, 'Aldi', 'ursula user', NULL, NULL);
+INSERT INTO user_entity VALUES ('32358881-30ad-4438-96bd-bf8ce355c3c3', NULL, '04b7bfb7-e8c5-43e8-b56f-316c9a0df49f', false, true, NULL, NULL, NULL, 'Joyn', 'omer owner', NULL, NULL);
+INSERT INTO user_entity VALUES ('f06239ea-7b23-4947-b7a2-ed860ab663a1', NULL, 'b7273c1d-6282-4412-a53a-4fd456b61852', false, true, NULL, NULL, NULL, 'Joyn', 'patricia partner', NULL, NULL);
+INSERT INTO user_entity VALUES ('cdc2a83b-1c36-4a13-854c-ed152c5f6f33', NULL, '03340128-877e-4fce-aaa4-86d3e196560c', false, true, NULL, NULL, NULL, 'Joyn', 'pauline partner', NULL, NULL);
+INSERT INTO user_entity VALUES ('95f05f01-0a98-4501-a637-5340add5db93', NULL, '8b1a57b4-9799-40f8-b8d5-04327475ced4', false, true, NULL, NULL, NULL, 'Joyn', 'ursula user', NULL, NULL);
 INSERT INTO user_entity VALUES ('1a13429f-e42d-4e57-aef8-aedaf164647c', 'admin@example.org', 'admin@example.org', false, true, NULL, 'apiman', 'admin', 'fa758415-6fe8-4313-b599-643292361e3d', 'admin', NULL, NULL);
 INSERT INTO user_entity VALUES ('11f68ecb-f7be-41d8-a6d6-cff1470aca9d', 'apimanager@example.org', 'apimanager@example.org', false, true, NULL, 'api', 'manager', 'fa758415-6fe8-4313-b599-643292361e3d', 'apimanager', NULL, NULL);
-INSERT INTO user_entity VALUES ('016c5d30-ab12-42f2-ba9e-0b3efe81df4a', NULL, 'df50dc63-6c5c-4fc1-9d83-0ab0bb3389bd', true, true, NULL, NULL, NULL, 'Colruyt', 'odette owner', NULL, NULL);
-INSERT INTO user_entity VALUES ('5a652b95-6f02-4806-8c06-f1263f7583ee', NULL, '695973cc-c6f9-4fa0-a754-caf7727d6773', true, true, NULL, NULL, NULL, 'Colruyt', 'paul partner', NULL, NULL);
-INSERT INTO user_entity VALUES ('564b4e34-db96-4e3e-8aa6-36a4e4df0c92', NULL, '8101bfb7-7b71-40f4-bb5a-c5ac034c33c0', true, true, NULL, NULL, NULL, 'Colruyt', 'patrick partner', NULL, NULL);
-INSERT INTO user_entity VALUES ('4c8ef5d1-2b1e-4119-a105-8ddf181f7b7c', NULL, '49cb29e5-c446-4033-913a-df15eba3925f', true, true, NULL, NULL, NULL, 'Colruyt', 'urbain user', NULL, NULL);
+INSERT INTO user_entity VALUES ('016c5d30-ab12-42f2-ba9e-0b3efe81df4a', NULL, 'df50dc63-6c5c-4fc1-9d83-0ab0bb3389bd', true, true, NULL, NULL, NULL, 'FidCash', 'odette owner', NULL, NULL);
+INSERT INTO user_entity VALUES ('5a652b95-6f02-4806-8c06-f1263f7583ee', NULL, '695973cc-c6f9-4fa0-a754-caf7727d6773', true, true, NULL, NULL, NULL, 'FidCash', 'paul partner', NULL, NULL);
+INSERT INTO user_entity VALUES ('564b4e34-db96-4e3e-8aa6-36a4e4df0c92', NULL, '8101bfb7-7b71-40f4-bb5a-c5ac034c33c0', true, true, NULL, NULL, NULL, 'FidCash', 'patrick partner', NULL, NULL);
+INSERT INTO user_entity VALUES ('4c8ef5d1-2b1e-4119-a105-8ddf181f7b7c', NULL, '49cb29e5-c446-4033-913a-df15eba3925f', true, true, NULL, NULL, NULL, 'FidCash', 'urbain user', NULL, NULL);
 INSERT INTO user_entity VALUES ('ab69c819-d744-406e-8a0f-ccc7db99fc98', NULL, '0a7e92e5-bb6b-4104-b91e-d370d0c3b835', false, true, NULL, NULL, NULL, 'master', 'admin', 1489055462368, NULL);
+INSERT INTO user_entity VALUES ('83da6f96-39d2-4b75-8bd1-01b7976c4548', 'service-account-colruytapplication@placeholder.org', 'service-account-colruytapplication@placeholder.org', false, true, NULL, NULL, NULL, 'FidCash', 'service-account-colruytapplication', 1497510722802, '505e6b3f-1884-4b26-a68a-0635ff513fad');
 
 
 --
@@ -3969,6 +3988,10 @@ INSERT INTO user_role_mapping VALUES ('5ebaf50f-278f-4caa-bf2a-a6483ed909c0', 'a
 INSERT INTO user_role_mapping VALUES ('af5f4188-9dbd-49b0-bfb2-ffabb9652c79', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
 INSERT INTO user_role_mapping VALUES ('169ae6bd-87e6-4112-8411-b858eb5bcb35', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
 INSERT INTO user_role_mapping VALUES ('d26a5067-239f-4c4f-979b-02d617de32af', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
+INSERT INTO user_role_mapping VALUES ('88eac625-ce82-4e85-b60a-eec0c8ab2a50', '83da6f96-39d2-4b75-8bd1-01b7976c4548');
+INSERT INTO user_role_mapping VALUES ('4779830c-ad5a-4848-b4cd-599c580255a1', '83da6f96-39d2-4b75-8bd1-01b7976c4548');
+INSERT INTO user_role_mapping VALUES ('d60ee4da-cc16-4b12-829a-42feabd04aaf', '83da6f96-39d2-4b75-8bd1-01b7976c4548');
+INSERT INTO user_role_mapping VALUES ('44b6498c-c088-4bf6-a022-7f7e980ed7d7', '83da6f96-39d2-4b75-8bd1-01b7976c4548');
 
 
 --
@@ -5504,3 +5527,4 @@ ALTER TABLE ONLY identity_provider_config
 --
 -- PostgreSQL database dump complete
 --
+

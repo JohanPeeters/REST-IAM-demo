@@ -1,0 +1,70 @@
+{
+	"variables": [],
+	"info": {
+		"name": "REST-IAM demo (Local)",
+		"_postman_id": "a0c02776-c38c-6124-ab85-e805a1a18ec8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Colruyt owner requests an access and ID token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://keycloak.com:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "odette owner",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "this is more than 20 characters",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "colruytApplication",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "9a1fa4b9-eda1-493d-8bb8-246580b865a3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
