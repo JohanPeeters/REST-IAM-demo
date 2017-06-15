@@ -19,7 +19,7 @@ var kcmgr = makeRequest('GET', 'appsettings.json')
         var config = {
             authority: parsedData.keyCloakBaseUri,
             client_id: parsedData.keyCloakClientId,
-            redirect_uri: parsedData.serverurls,
+            redirect_uri: parsedData.serverurls + "/callback.html",
             response_type: "id_token token",
             scope: "openid profile",
             post_logout_redirect_uri: parsedData.serverurls + "/index.html"
@@ -63,7 +63,7 @@ function kcapi() {
     path = "/invoice";
     kcmgr.then(
         kcmgr => kcmgr.getUser().then(function (user) {
-            var url = productApi.then(function (api) {
+            var url = invoiceApi.then(function (kcapi) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", kcapi + path);
                 xhr.onload = function () {
