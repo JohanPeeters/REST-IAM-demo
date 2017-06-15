@@ -1,3 +1,4 @@
+
 --
 -- PostgreSQL database dump
 --
@@ -1706,6 +1707,7 @@ INSERT INTO client VALUES ('102112b4-0529-46c4-afc3-5dded7a42ff9', true, true, '
 INSERT INTO client VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', true, false, 'security-admin-console', 0, true, '1e7712f0-c2bb-46db-978d-76e12dcf5b11', '/auth/admin/Colruyt/console/index.html', false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, false, 'account', 0, false, 'e92a3264-9841-43a8-914d-8a4b87cc1434', '/auth/realms/Colruyt/account', false, NULL, false, 'FidCash', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, false, 'colruytApplication', 0, false, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'FidCash', 'openid-connect', -1, false, false, NULL, true, 'client-secret', NULL, NULL, NULL, false, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', true, true, 'genericSPA', 0, true, '37dc9f83-7922-4f4a-9c18-0e57988b13b6', NULL, false, 'http://spaclient.org:8080/', false, 'FidCash', 'openid-connect', -1, false, true, NULL, false, 'client-secret', 'http://spaclient.org:8080/', NULL, NULL, false, true, false, NULL, false, false, false);
 
 
 --
@@ -1759,6 +1761,16 @@ INSERT INTO client_attributes VALUES ('fd470925-9bc4-46ab-8e4b-e09094ba3c53', 'f
 INSERT INTO client_attributes VALUES ('fd470925-9bc4-46ab-8e4b-e09094ba3c53', 'false', 'saml.server.signature.keyinfo.ext');
 INSERT INTO client_attributes VALUES ('f8692af8-3bed-4a28-891d-0b2e5de5e9a0', 'false', 'saml.onetimeuse.condition');
 INSERT INTO client_attributes VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'false', 'saml.onetimeuse.condition');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.assertion.signature');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.multivalued.roles');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.force.post.binding');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.encrypt');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml_force_name_id_format');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.client.signature');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.authnstatement');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.server.signature');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.server.signature.keyinfo.ext');
+INSERT INTO client_attributes VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'false', 'saml.onetimeuse.condition');
 
 
 --
@@ -2669,6 +2681,12 @@ INSERT INTO protocol_mapper VALUES ('4fd7006e-571f-4e01-8a7f-50c8f6ad6637', 'ema
 INSERT INTO protocol_mapper VALUES ('4ee0b112-2be5-46fc-ab20-d634e8dd10c2', 'Client ID', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
 INSERT INTO protocol_mapper VALUES ('c7048682-aa7e-4b32-a269-bae6a2386859', 'Client Host', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
 INSERT INTO protocol_mapper VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'Client IP Address', 'openid-connect', 'oidc-usersessionmodel-note-mapper', false, '', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL);
+INSERT INTO protocol_mapper VALUES ('05d30cb0-d5f0-40dd-9c32-12dd0548978f', 'role list', 'saml', 'saml-role-list-mapper', false, NULL, 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
+INSERT INTO protocol_mapper VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'username', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${username}', 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
+INSERT INTO protocol_mapper VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'email', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${email}', 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
+INSERT INTO protocol_mapper VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'given name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${givenName}', 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
+INSERT INTO protocol_mapper VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'family name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${familyName}', 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
+INSERT INTO protocol_mapper VALUES ('d84e1e68-682e-4a56-8c8f-96dffa85b02e', 'full name', 'openid-connect', 'oidc-full-name-mapper', true, '${fullName}', 'a7aaaaf5-6079-4e03-8316-7a99a7029191', NULL);
 
 
 --
@@ -3606,6 +3624,35 @@ INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223
 INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'true', 'access.token.claim');
 INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'clientAddress', 'claim.name');
 INSERT INTO protocol_mapper_config VALUES ('a40a4858-be37-4c32-9a1b-cbb7f49a1223', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('05d30cb0-d5f0-40dd-9c32-12dd0548978f', 'false', 'single');
+INSERT INTO protocol_mapper_config VALUES ('05d30cb0-d5f0-40dd-9c32-12dd0548978f', 'Basic', 'attribute.nameformat');
+INSERT INTO protocol_mapper_config VALUES ('05d30cb0-d5f0-40dd-9c32-12dd0548978f', 'Role', 'attribute.name');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'username', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'preferred_username', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('79d8f96d-b5bd-4b73-b090-118e39f13606', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'email', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'email', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('f1262ffb-e416-45c3-a56e-cc61af799823', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'firstName', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'given_name', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('73a9e1ae-19b2-485a-83bf-f20837567920', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'lastName', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'family_name', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('43814ef4-3ae5-4779-a44e-e71e839e0a68', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('d84e1e68-682e-4a56-8c8f-96dffa85b02e', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('d84e1e68-682e-4a56-8c8f-96dffa85b02e', 'true', 'access.token.claim');
 
 
 --
@@ -3766,6 +3813,7 @@ INSERT INTO redirect_uris VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', '/auth
 INSERT INTO redirect_uris VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', '/auth/realms/Colruyt/account/*');
 INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://spa:4200/*');
 INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://localhost:4200/*');
+INSERT INTO redirect_uris VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'http://spaclient.org:8080/*');
 
 
 --
@@ -4022,6 +4070,7 @@ INSERT INTO web_origins VALUES ('11afe0d4-0779-410a-a962-f9c50bd3122f', '*');
 INSERT INTO web_origins VALUES ('fd470925-9bc4-46ab-8e4b-e09094ba3c53', '*');
 INSERT INTO web_origins VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://spa:4200');
 INSERT INTO web_origins VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://localhost:4200');
+INSERT INTO web_origins VALUES ('a7aaaaf5-6079-4e03-8316-7a99a7029191', 'http://spaclient.org:8080');
 
 
 --

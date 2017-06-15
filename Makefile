@@ -40,7 +40,6 @@ run:
 clean-run: rm-postgres
 	-@docker volume rm restiamdemo_pg_data
 	@docker-compose up -d --build
-	@make spa
 
 persist-kc-config:
 	@echo "\c ${KC_DB}" > ./initdb/keycloak.sql
