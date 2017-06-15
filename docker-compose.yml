@@ -24,10 +24,51 @@ services:
       POSTGRES_DATABASE: ${KC_DB}
       POSTGRES_USER: ${KC_DB_OWNER}
       POSTGRES_PASSWORD: ${KC_DB_OWNER_PWD}
-  resourceserver:
-      build: ./resourceserver
-      container_name: ${RS_NAME}
-      ports:
-         - "8080:8080"
+         
+  spaclient:
+    image: spaclient
+    build:
+      context: ./SpaClient
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+    ports:
+      - "8080:8080"
+
+  spaidsrv:
+    image: spaidsrv
+    build:
+      context: ./SpaIdSrv
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+    ports:
+      - "8081:8081"
+
+  #The productapi will be protected by identityserver
+  productapi:
+    image: productapi
+    build:
+      context: ./ProductApi
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT} 
+    ports:
+      - "8082:8082"
+    #link required because the productapi loads the openidconfiguration from idsrv
+    links:
+      - spaidsrv:spaidsrv.org
+
+  #The invoiceapi will be protected by Keycloak
+  invoiceapi:
+    image: invoiceapi
+    build:
+      context: ./InvoiceApi
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT} 
+    ports:
+      - "8083:8083"
+    #link to keycloak to be added!
 volumes:
   pg_data:

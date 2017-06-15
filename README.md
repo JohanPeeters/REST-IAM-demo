@@ -2,6 +2,14 @@
 
 This repository aims to build, run and test the target Docker images: iam-service/keycloak, iam-service/apiman, iam-service/test-service and postgres locally. Its Makefile makes this very easy, as well as deploying these artefacts to AWS.
 
+## What should your hosts file look like ##
+#SPAConference
+127.0.0.1   softwarewolves.org
+127.0.0.1	spaclient.org
+127.0.0.1	spaidsrv.org
+127.0.0.1	productapi.org
+127.0.0.1	invoiceapi.org
+
 ## What is this repository for? ##
 
 This repo contains

@@ -19,7 +19,7 @@ verify:
 stop:
 	@docker-compose stop
 
-spa:
+obsoletespa:
 	@cd client && webpack && webpack-dev-server
 
 rm: stop
