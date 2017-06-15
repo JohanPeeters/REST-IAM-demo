@@ -1,38 +1,4 @@
-﻿//Generic methods start
-
-
-//function to make xhr requests without jquery
-function makeRequest(method, url) {
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.onload = function () {
-            if (this.status >= 200 && this.status < 300) {
-                resolve(xhr.response);
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        xhr.onerror = function () {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            });
-        };
-        xhr.send();
-    });
-}
-
-document.getElementById("loginidsrv").addEventListener("click", login, false);
-document.getElementById("api").addEventListener("click", api, false);
-document.getElementById("logoutidsrv").addEventListener("click", logout, false);
-document.getElementById("loginkeycloak").addEventListener("click", loginKeycloak, false);
-document.getElementById("logoutkeycloak").addEventListener("click", logoutKeycloak, false);
-
-//Generic methods end
+﻿
 
 //Identityserver methods start
 function logIdentityserver() {
@@ -118,47 +84,5 @@ function logout() {
     );
 }
 //Identityserver methods end
-
-
-//Keycloak methods start
-function logKeycloak() {
-    document.getElementById('resultsKeycloak').innerText = '';
-
-    Array.prototype.forEach.call(arguments, function (msg) {
-        if (msg instanceof Error) {
-            msg = "Error: " + msg.message;
-        }
-        else if (typeof msg !== 'string') {
-            msg = JSON.stringify(msg, null, 2);
-        }
-        document.getElementById('resultsKeycloak').innerHTML += msg + '\r\n';
-    });
-}
-
-var keycloak = Keycloak({
-    url: 'https://softwarewolves.org:8443/auth',
-    realm: 'Colruyt',
-    clientId: 'genericSPA'
-});
-keycloak.init({ flow: 'implicit' }).success(function (authenticated) {
-    if (authenticated) {
-        logKeycloak("User logged in with KeyCloak");
-    }
-    else {
-        logKeycloak("User not logged in with KeyClaok");
-    }
-}).error(function () {
-    alert('failed to initialize');
-    });
-
-function loginKeycloak() {
-    keycloak.login();
-}
-
-function logoutKeycloak() {
-    keycloak.logout();
-}
-//Keycloak methods end
-
 
 
