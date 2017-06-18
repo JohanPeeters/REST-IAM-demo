@@ -69,6 +69,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT} 
     ports:
       - "8083:8083"
-    #link to keycloak to be added!
+    #link required because the invoiceapi loads the openidconfiguration from keycloak
+    links:
+      - keycloak:softwarewolves.org
 volumes:
   pg_data:

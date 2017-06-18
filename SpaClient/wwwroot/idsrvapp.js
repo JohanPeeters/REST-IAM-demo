@@ -69,7 +69,7 @@ function api() {
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", api + path);
                 xhr.onload = function () {
-                    log(xhr.status, JSON.parse(xhr.responseText));
+                    logIdentityserver(xhr.status, JSON.parse(xhr.responseText));
                 };
                 xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
                 xhr.send();

@@ -67,7 +67,7 @@ function kcapi() {
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", kcapi + path);
                 xhr.onload = function () {
-                    log(xhr.status, JSON.parse(xhr.responseText));
+                    logKeycloak(xhr.status, JSON.parse(xhr.responseText));
                 };
                 xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
                 xhr.send();

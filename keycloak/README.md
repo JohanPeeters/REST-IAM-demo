@@ -5,7 +5,11 @@ The image has a single, administrative user, with username `admin`. The user is 
 The image exposes listens for HTTPS requests on port 8443.
 `standalone.xml` configures the HTTPS listener of the KeyCloak instance running in the Docker container. `standalone.conf` adds Java options that cause the realms defined in the `realms` directory to be loaded. The self-signed certificate and key pair used in the HTTPS connection is in `keystore.jks`. The key store was generated with
 
-    keytool  -genkey -noprompt -trustcacerts -keyalg RSA -alias keytool.softwarewolves -dname "CN=softwarewolves.org" -keypass AranTheDog -keystore keystore.jks -storepass AranTheDog
+    keytool  -genkey -noprompt -trustcacerts -keyalg RSA -alias keytool.softwarewolves -dname "CN=softwarewolves.org" -ext SAN=dns:softwarewolves.org -keypass AranTheDog -keystore keystore.jks -storepass AranTheDog
+    
+Export the certificate with:
+
+    keytool -exportcert -rfc -alias keytool.softwarewolves -keystore keystore.jks --keypass AranTheDog -storepass AranTheDog -file softwarewolves.crt
 
 ## Contribution guidelines ##
 
