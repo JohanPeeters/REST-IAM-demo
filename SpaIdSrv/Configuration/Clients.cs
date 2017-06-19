@@ -46,7 +46,7 @@ namespace SpaIdSrv.Configuration
                     {
                       new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "productapi" }
+                    AllowedScopes = { "product.read" }
                 }
             };
         }

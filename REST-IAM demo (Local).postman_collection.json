@@ -81,7 +81,7 @@
 				}
 			],
 			"request": {
-				"url": "https://localhost:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+				"url": "http://spaidsrv.org:8081/connect/token",
 				"method": "POST",
 				"header": [
 					{
@@ -95,12 +95,12 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "odette owner",
+							"value": "johan",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "this is more than 20 characters",
+							"value": "password",
 							"type": "text"
 						},
 						{
@@ -110,14 +110,20 @@
 						},
 						{
 							"key": "client_id",
-							"value": "colruytApplication",
+							"value": "postman",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "9a1fa4b9-eda1-493d-8bb8-246580b865a3",
+							"value": "secret",
 							"description": "",
 							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "product.read",
+							"type": "text",
+							"enabled": true
 						}
 					]
 				},
