@@ -41,6 +41,14 @@ namespace ProductApi
                 });
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("read",
+                    policy => policy.RequireClaim("scope", "product.read"));
+                options.AddPolicy("readwrite",
+                    policy => policy.RequireClaim("scope", "product.readwrite"));
+            });
+
             services.AddMvcCore()
                 .AddAuthorization()
                 .AddJsonFormatters();
