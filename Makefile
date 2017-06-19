@@ -17,6 +17,10 @@ endef
 verify:
 	$(info Testing of necessary name resolutions using hostfile for local testing)
 	$(call resolvesToLocal,softwarewolves.org)
+	$(call resolvesToLocal,spaidsrv.org)
+	$(call resolvesToLocal,spaclient.org)
+	$(call resolvesToLocal,productapi.org)
+	$(call resolvesToLocal,invoiceapi.org)
 
 stop:
 	@docker-compose stop
