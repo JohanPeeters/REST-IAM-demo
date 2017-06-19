@@ -33,6 +33,19 @@ namespace SpaIdSrv.Configuration
                         IdentityServerConstants.StandardScopes.Profile,
                         "productapi"
                     }
+                },
+                // Postman
+                new Client
+
+                {
+                    ClientId = "postman",
+                    ClientName = "postman",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientSecrets =
+                    {
+                      new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = { "productapi" }
                 }
             };
         }
