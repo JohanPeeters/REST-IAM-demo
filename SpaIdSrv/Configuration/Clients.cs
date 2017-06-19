@@ -31,7 +31,8 @@ namespace SpaIdSrv.Configuration
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "productapi"
+                        "product.read",
+                        "product.readwrite",
                     }
                 }
             };

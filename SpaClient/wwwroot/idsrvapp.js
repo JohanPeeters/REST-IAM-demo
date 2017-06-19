@@ -23,7 +23,7 @@ var mgr = makeRequest('GET', 'appsettings.json')
             client_id: parsedData.serverurls,
             redirect_uri: parsedData.serverurls + "/callback.html",
             response_type: "id_token token",
-            scope: "openid profile productapi",
+            scope: "openid profile product.read product.readwrite",
             post_logout_redirect_uri: parsedData.serverurls + "/index.html"
         };
         var mgr = new Oidc.UserManager(config);
@@ -61,13 +61,13 @@ var productApi = makeRequest('GET', 'appsettings.json')
         console.error('Error: ', err.statusText);
     });
 
-function api() {
-    path = "/identity";
+function readproductapi() {
+    path = "/product/read";
     mgr.then(
         mgr => mgr.getUser().then(function (user) {
-            var url = productApi.then(function (api) {
+            var url = productApi.then(function (readproductapi) {
                 var xhr = new XMLHttpRequest();
-                xhr.open("GET", api + path);
+                xhr.open("GET", readproductapi + path);
                 xhr.onload = function () {
                     logIdentityserver(xhr.status, JSON.parse(xhr.responseText));
                 };
@@ -76,6 +76,23 @@ function api() {
             });
         })
         );
+}
+
+function writeproductapi() {
+    path = "/product/write?productname=test";
+    mgr.then(
+        mgr => mgr.getUser().then(function (user) {
+            var url = productApi.then(function (writeproductapi) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", writeproductapi + path);
+                xhr.onload = function () {
+                    logIdentityserver(xhr.status, JSON.parse(xhr.responseText));
+                };
+                xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+                xhr.send();
+            });
+        })
+    );
 }
 
 function logout() {

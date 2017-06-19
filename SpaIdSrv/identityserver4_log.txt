@@ -4678,3 +4678,469 @@ System.InvalidOperationException: The antiforgery token could not be decrypted. 
 2017-06-14 19:29:46.751 +00:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
 2017-06-14 19:29:46.754 +00:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
 2017-06-14 19:29:46.971 +00:00 [Information] User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-06-19 20:09:25.438 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-06-19 20:09:25.494 +02:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-06-19 20:09:25.502 +02:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-06-19 20:09:25.768 +02:00 [Information] User profile is available. Using '"C:\Users\Michael\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-06-19 20:09:40.250 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/.well-known/openid-configuration  
+2017-06-19 20:09:40.296 +02:00 [Debug] CORS request made for path: "/.well-known/openid-configuration" from origin: "http://spaclient.org:8080"
+2017-06-19 20:09:40.302 +02:00 [Debug] Client list checked and origin: "http://spaclient.org:8080" is allowed
+2017-06-19 20:09:40.308 +02:00 [Debug] CorsPolicyService allowed origin: "http://spaclient.org:8080"
+2017-06-19 20:09:40.378 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-06-19 20:09:40.385 +02:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-06-19 20:09:40.392 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-06-19 20:09:40.400 +02:00 [Verbose] Processing discovery request.
+2017-06-19 20:09:40.404 +02:00 [Debug] Start discovery request
+2017-06-19 20:09:40.426 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-06-19 20:09:40.657 +02:00 [Information] Request finished in 430.6832ms 200 application/json
+2017-06-19 20:09:40.659 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=85433547d670456d9bafbbf6d0dac602&nonce=9a791208acf841888a90d3ae0831a189  
+2017-06-19 20:09:40.794 +02:00 [Information] "idsrv" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-06-19 20:09:40.799 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-06-19 20:09:40.801 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:09:40.812 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-06-19 20:09:40.823 +02:00 [Debug] Start authorize request
+2017-06-19 20:09:40.846 +02:00 [Debug] No user present in authorize request
+2017-06-19 20:09:40.854 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:09:40.896 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:09:40.901 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:09:40.959 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"85433547d670456d9bafbbf6d0dac602\",
+  \"Nonce\": \"9a791208acf841888a90d3ae0831a189\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"85433547d670456d9bafbbf6d0dac602\",
+    \"nonce\": \"9a791208acf841888a90d3ae0831a189\"
+  }
+}"
+2017-06-19 20:09:40.973 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:09:40.980 +02:00 [Information] Showing login: User is not authenticated
+2017-06-19 20:09:40.984 +02:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.LoginPageResult"
+2017-06-19 20:09:40.987 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.LoginPageResult"
+2017-06-19 20:09:41.006 +02:00 [Information] Request finished in 346.5951ms 302 
+2017-06-19 20:09:41.015 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/account/login?returnUrl=%2Fconnect%2Fauthorize%2Flogin%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D85433547d670456d9bafbbf6d0dac602%26nonce%3D9a791208acf841888a90d3ae0831a189  
+2017-06-19 20:09:41.021 +02:00 [Information] "idsrv" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-06-19 20:09:41.025 +02:00 [Verbose] No endpoint entry found for request path: "/account/login"
+2017-06-19 20:09:41.405 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" with arguments (["/connect/authorize/login?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=85433547d670456d9bafbbf6d0dac602&nonce=9a791208acf841888a90d3ae0831a189"]) - ModelState is Valid
+2017-06-19 20:09:41.423 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:41.432 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:41.435 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:09:41.439 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:09:41.440 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:09:41.442 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:09:41.447 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:09:43.824 +02:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-06-19 20:09:44.350 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" in 3090.6117ms
+2017-06-19 20:09:44.361 +02:00 [Information] Request finished in 3345.9879ms 200 text/html; charset=utf-8
+2017-06-19 20:09:46.855 +02:00 [Information] Request starting HTTP/1.1 POST http://spaidsrv.org:8081/account/login?returnUrl=%2Fconnect%2Fauthorize%2Flogin%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D85433547d670456d9bafbbf6d0dac602%26nonce%3D9a791208acf841888a90d3ae0831a189 application/x-www-form-urlencoded 593
+2017-06-19 20:09:46.865 +02:00 [Information] "idsrv" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-06-19 20:09:46.871 +02:00 [Verbose] No endpoint entry found for request path: "/account/login"
+2017-06-19 20:09:46.963 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" with arguments (["IdentityServer4.Quickstart.UI.LoginInputModel"]) - ModelState is Valid
+2017-06-19 20:09:46.979 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:46.987 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:46.989 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:09:46.992 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:09:46.996 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:09:47.001 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:09:47.005 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:09:47.013 +02:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-06-19 20:09:47.040 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" in 163.8652ms
+2017-06-19 20:09:47.045 +02:00 [Information] Request finished in 190.2091ms 200 text/html; charset=utf-8
+2017-06-19 20:09:52.135 +02:00 [Information] Request starting HTTP/1.1 POST http://spaidsrv.org:8081/account/login?returnUrl=%2Fconnect%2Fauthorize%2Flogin%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D85433547d670456d9bafbbf6d0dac602%26nonce%3D9a791208acf841888a90d3ae0831a189 application/x-www-form-urlencoded 602
+2017-06-19 20:09:52.150 +02:00 [Information] "idsrv" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-06-19 20:09:52.154 +02:00 [Verbose] No endpoint entry found for request path: "/account/login"
+2017-06-19 20:09:52.160 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" with arguments (["IdentityServer4.Quickstart.UI.LoginInputModel"]) - ModelState is Valid
+2017-06-19 20:09:52.176 +02:00 [Debug] Augmenting SignInContext
+2017-06-19 20:09:52.209 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-06-19 20:09:52.214 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:52.216 +02:00 [Verbose] IsValidReturnUrl true
+2017-06-19 20:09:52.221 +02:00 [Information] Executing RedirectResult, redirecting to "/connect/authorize/login?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=85433547d670456d9bafbbf6d0dac602&nonce=9a791208acf841888a90d3ae0831a189".
+2017-06-19 20:09:52.230 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.AccountController.Login (SpaIdSrv)" in 71.6922ms
+2017-06-19 20:09:52.236 +02:00 [Information] Request finished in 101.3364ms 302 
+2017-06-19 20:09:52.239 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize/login?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=85433547d670456d9bafbbf6d0dac602&nonce=9a791208acf841888a90d3ae0831a189  
+2017-06-19 20:09:52.254 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:09:52.262 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.266 +02:00 [Debug] Request path "/connect/authorize/login" matched to endpoint type Authorize
+2017-06-19 20:09:52.267 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:09:52.270 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize/login"
+2017-06-19 20:09:52.280 +02:00 [Debug] Start authorize request (after login)
+2017-06-19 20:09:52.285 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.292 +02:00 [Debug] User in authorize request: "2"
+2017-06-19 20:09:52.295 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:09:52.297 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.299 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:09:52.303 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:09:52.306 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"85433547d670456d9bafbbf6d0dac602\",
+  \"Nonce\": \"9a791208acf841888a90d3ae0831a189\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"85433547d670456d9bafbbf6d0dac602\",
+    \"nonce\": \"9a791208acf841888a90d3ae0831a189\"
+  }
+}"
+2017-06-19 20:09:52.317 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:09:52.330 +02:00 [Debug] "user_consent" grant with value: "http://spaclient.org:8080|2" not found in store.
+2017-06-19 20:09:52.337 +02:00 [Information] Showing consent: User has not yet consented
+2017-06-19 20:09:52.341 +02:00 [Verbose] End Authorize Request. Result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:09:52.344 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:09:52.348 +02:00 [Information] Request finished in 108.858ms 302 
+2017-06-19 20:09:52.357 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/consent?returnUrl=%2Fconnect%2Fauthorize%2Fconsent%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D85433547d670456d9bafbbf6d0dac602%26nonce%3D9a791208acf841888a90d3ae0831a189  
+2017-06-19 20:09:52.362 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:09:52.365 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.368 +02:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-06-19 20:09:52.372 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" with arguments (["/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=85433547d670456d9bafbbf6d0dac602&nonce=9a791208acf841888a90d3ae0831a189"]) - ModelState is Valid
+2017-06-19 20:09:52.382 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:52.387 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:09:52.390 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.393 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:09:52.396 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:09:52.399 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:09:52.401 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:09:52.402 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:09:52.403 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:10:45.354 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-06-19 20:10:45.420 +02:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-06-19 20:10:45.426 +02:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-06-19 20:10:45.689 +02:00 [Information] User profile is available. Using '"C:\Users\Michael\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-06-19 20:13:58.783 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-06-19 20:13:58.836 +02:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-06-19 20:13:58.841 +02:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-06-19 20:13:59.088 +02:00 [Information] User profile is available. Using '"C:\Users\Michael\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-06-19 20:14:08.111 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/.well-known/openid-configuration  
+2017-06-19 20:14:08.154 +02:00 [Debug] CORS request made for path: "/.well-known/openid-configuration" from origin: "http://spaclient.org:8080"
+2017-06-19 20:14:08.162 +02:00 [Debug] Client list checked and origin: "http://spaclient.org:8080" is allowed
+2017-06-19 20:14:08.166 +02:00 [Debug] CorsPolicyService allowed origin: "http://spaclient.org:8080"
+2017-06-19 20:14:08.235 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-06-19 20:14:08.242 +02:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-06-19 20:14:08.248 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-06-19 20:14:08.254 +02:00 [Verbose] Processing discovery request.
+2017-06-19 20:14:08.260 +02:00 [Debug] Start discovery request
+2017-06-19 20:14:08.284 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-06-19 20:14:08.511 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=4301230ca9d44d8785ca94a5365d66aa&nonce=1a9ce33b804244d4a60734136650cf6c  
+2017-06-19 20:14:08.512 +02:00 [Information] Request finished in 424.5815ms 200 application/json
+2017-06-19 20:14:08.641 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:14:08.646 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:08.650 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-06-19 20:14:08.654 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:14:08.663 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-06-19 20:14:08.677 +02:00 [Debug] Start authorize request
+2017-06-19 20:14:08.703 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:08.714 +02:00 [Debug] User in authorize request: "2"
+2017-06-19 20:14:08.723 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:14:08.767 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:08.770 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:14:08.772 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:14:08.817 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"4301230ca9d44d8785ca94a5365d66aa\",
+  \"Nonce\": \"1a9ce33b804244d4a60734136650cf6c\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"4301230ca9d44d8785ca94a5365d66aa\",
+    \"nonce\": \"1a9ce33b804244d4a60734136650cf6c\"
+  }
+}"
+2017-06-19 20:14:08.833 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:14:08.857 +02:00 [Debug] "user_consent" grant with value: "http://spaclient.org:8080|2" not found in store.
+2017-06-19 20:14:08.860 +02:00 [Information] Showing consent: User has not yet consented
+2017-06-19 20:14:08.863 +02:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:14:08.868 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:14:08.882 +02:00 [Information] Request finished in 370.9839ms 302 
+2017-06-19 20:14:08.893 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/consent?returnUrl=%2Fconnect%2Fauthorize%2Fconsent%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D4301230ca9d44d8785ca94a5365d66aa%26nonce%3D1a9ce33b804244d4a60734136650cf6c  
+2017-06-19 20:14:08.899 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:14:08.901 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:08.903 +02:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-06-19 20:14:09.321 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" with arguments (["/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=4301230ca9d44d8785ca94a5365d66aa&nonce=1a9ce33b804244d4a60734136650cf6c"]) - ModelState is Valid
+2017-06-19 20:14:09.345 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:14:09.353 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:14:09.360 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:09.365 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:14:09.367 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:14:09.369 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:14:09.375 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:14:09.378 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:14:09.386 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:15:11.922 +02:00 [Information] Executing ViewResult, running view at path "/Views/Consent/Index.cshtml".
+2017-06-19 20:15:12.398 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:12.460 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" in 63325.9354ms
+2017-06-19 20:15:12.470 +02:00 [Information] Request finished in 63578.0847ms 200 text/html; charset=utf-8
+2017-06-19 20:15:17.741 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/.well-known/openid-configuration  
+2017-06-19 20:15:17.749 +02:00 [Debug] CORS request made for path: "/.well-known/openid-configuration" from origin: "http://spaclient.org:8080"
+2017-06-19 20:15:17.755 +02:00 [Debug] Client list checked and origin: "http://spaclient.org:8080" is allowed
+2017-06-19 20:15:17.758 +02:00 [Debug] CorsPolicyService allowed origin: "http://spaclient.org:8080"
+2017-06-19 20:15:17.762 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-06-19 20:15:17.764 +02:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-06-19 20:15:17.767 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-06-19 20:15:17.773 +02:00 [Verbose] Processing discovery request.
+2017-06-19 20:15:17.777 +02:00 [Debug] Start discovery request
+2017-06-19 20:15:17.780 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-06-19 20:15:17.785 +02:00 [Information] Request finished in 43.7487ms 200 application/json
+2017-06-19 20:15:17.793 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=b49d149ba1ec4fabb2a9c49a810db368&nonce=80d64cc355d44ae3a54107a8ee100719  
+2017-06-19 20:15:17.803 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:15:17.806 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.809 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-06-19 20:15:17.813 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:15:17.816 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-06-19 20:15:17.819 +02:00 [Debug] Start authorize request
+2017-06-19 20:15:17.822 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.826 +02:00 [Debug] User in authorize request: "2"
+2017-06-19 20:15:17.828 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:15:17.831 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.835 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:15:17.838 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:15:17.840 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+  \"Nonce\": \"80d64cc355d44ae3a54107a8ee100719\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+    \"nonce\": \"80d64cc355d44ae3a54107a8ee100719\"
+  }
+}"
+2017-06-19 20:15:17.850 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:15:17.852 +02:00 [Debug] "user_consent" grant with value: "http://spaclient.org:8080|2" not found in store.
+2017-06-19 20:15:17.858 +02:00 [Information] Showing consent: User has not yet consented
+2017-06-19 20:15:17.861 +02:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:15:17.863 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:15:17.868 +02:00 [Information] Request finished in 75.2564ms 302 
+2017-06-19 20:15:17.875 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/consent?returnUrl=%2Fconnect%2Fauthorize%2Fconsent%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3Db49d149ba1ec4fabb2a9c49a810db368%26nonce%3D80d64cc355d44ae3a54107a8ee100719  
+2017-06-19 20:15:17.885 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:15:17.892 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.896 +02:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-06-19 20:15:17.904 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" with arguments (["/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=b49d149ba1ec4fabb2a9c49a810db368&nonce=80d64cc355d44ae3a54107a8ee100719"]) - ModelState is Valid
+2017-06-19 20:15:17.912 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:15:17.916 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:15:17.920 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.923 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:15:17.925 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:15:17.930 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:15:17.933 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:15:17.936 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:15:17.941 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:16:03.273 +02:00 [Information] Executing ViewResult, running view at path "/Views/Consent/Index.cshtml".
+2017-06-19 20:16:03.293 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:16:03.304 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" in 45401.4712ms
+2017-06-19 20:16:03.314 +02:00 [Information] Request finished in 45439.0273ms 200 text/html; charset=utf-8
+2017-06-19 20:19:21.156 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-06-19 20:19:21.212 +02:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-06-19 20:19:21.219 +02:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-06-19 20:19:21.517 +02:00 [Information] User profile is available. Using '"C:\Users\Michael\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-06-19 20:19:27.298 +02:00 [Information] Request starting HTTP/1.1 POST http://spaidsrv.org:8081/consent application/x-www-form-urlencoded 797
+2017-06-19 20:19:27.472 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:19:27.497 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:27.513 +02:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-06-19 20:19:28.049 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" with arguments (["IdentityServer4.Quickstart.UI.ConsentInputModel"]) - ModelState is Valid
+2017-06-19 20:19:28.066 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:19:28.076 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:19:28.087 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.096 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:19:28.144 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.148 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:19:28.151 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:19:28.156 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:19:28.159 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:19:28.164 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.326 +02:00 [Verbose] Protecting message: "{\"Created\":636334931681717519,\"Data\":{}}"
+2017-06-19 20:19:28.371 +02:00 [Information] Executing RedirectResult, redirecting to "/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=b49d149ba1ec4fabb2a9c49a810db368&nonce=80d64cc355d44ae3a54107a8ee100719".
+2017-06-19 20:19:28.392 +02:00 [Information] Executed action "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" in 638.5884ms
+2017-06-19 20:19:28.457 +02:00 [Information] Request finished in 1189.0571ms 302 
+2017-06-19 20:19:28.470 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=b49d149ba1ec4fabb2a9c49a810db368&nonce=80d64cc355d44ae3a54107a8ee100719  
+2017-06-19 20:19:28.480 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:19:28.483 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.491 +02:00 [Debug] Request path "/connect/authorize/consent" matched to endpoint type Authorize
+2017-06-19 20:19:28.495 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:19:28.502 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize/consent"
+2017-06-19 20:19:28.515 +02:00 [Debug] Start authorize request (after consent)
+2017-06-19 20:19:28.518 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.583 +02:00 [Debug] User in authorize request: "2"
+2017-06-19 20:19:28.587 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:19:28.589 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:28.591 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:19:28.595 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:19:28.625 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+  \"Nonce\": \"80d64cc355d44ae3a54107a8ee100719\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+    \"nonce\": \"80d64cc355d44ae3a54107a8ee100719\"
+  }
+}"
+2017-06-19 20:19:28.641 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:19:28.659 +02:00 [Debug] "user_consent" grant with value: "http://spaclient.org:8080|2" not found in store.
+2017-06-19 20:19:28.665 +02:00 [Verbose] Consent was shown to user
+2017-06-19 20:19:28.666 +02:00 [Information] Error: User denied consent
+2017-06-19 20:19:28.670 +02:00 [Information] "{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+  \"Nonce\": \"80d64cc355d44ae3a54107a8ee100719\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"b49d149ba1ec4fabb2a9c49a810db368\",
+    \"nonce\": \"80d64cc355d44ae3a54107a8ee100719\"
+  }
+}"
+2017-06-19 20:19:28.678 +02:00 [Verbose] End Authorize Request. Result type: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-06-19 20:19:28.685 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-06-19 20:19:28.703 +02:00 [Information] Request finished in 233.3167ms 302 
+2017-06-19 20:19:34.611 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/.well-known/openid-configuration  
+2017-06-19 20:19:34.619 +02:00 [Debug] CORS request made for path: "/.well-known/openid-configuration" from origin: "http://spaclient.org:8080"
+2017-06-19 20:19:34.627 +02:00 [Debug] Client list checked and origin: "http://spaclient.org:8080" is allowed
+2017-06-19 20:19:34.632 +02:00 [Debug] CorsPolicyService allowed origin: "http://spaclient.org:8080"
+2017-06-19 20:19:34.641 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-06-19 20:19:34.645 +02:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-06-19 20:19:34.651 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-06-19 20:19:34.654 +02:00 [Verbose] Processing discovery request.
+2017-06-19 20:19:34.657 +02:00 [Debug] Start discovery request
+2017-06-19 20:19:34.678 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-06-19 20:19:34.713 +02:00 [Information] Request finished in 101.76ms 200 application/json
+2017-06-19 20:19:34.721 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/connect/authorize?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=1156203512a04aca9c73ff2216e793f7&nonce=e6e991d0a4b34ea88aabc08e8fe6ac0f  
+2017-06-19 20:19:34.728 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:19:34.732 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.736 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-06-19 20:19:34.738 +02:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-06-19 20:19:34.740 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-06-19 20:19:34.748 +02:00 [Debug] Start authorize request
+2017-06-19 20:19:34.752 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.757 +02:00 [Debug] User in authorize request: "2"
+2017-06-19 20:19:34.759 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:19:34.761 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.765 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:19:34.767 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:19:34.769 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"http://spaclient.org:8080\",
+  \"ClientName\": \"SPAClient\",
+  \"RedirectUri\": \"http://spaclient.org:8080/callback.html\",
+  \"AllowedRedirectUris\": [
+    \"http://spaclient.org:8080/callback.html\"
+  ],
+  \"SubjectId\": \"2\",
+  \"ResponseType\": \"id_token token\",
+  \"ResponseMode\": \"fragment\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile product.read product.readwrite\",
+  \"State\": \"1156203512a04aca9c73ff2216e793f7\",
+  \"Nonce\": \"e6e991d0a4b34ea88aabc08e8fe6ac0f\",
+  \"SessionId\": \"0cd993f770ee714c1ac32ea4642c7247\",
+  \"Raw\": {
+    \"client_id\": \"http://spaclient.org:8080\",
+    \"redirect_uri\": \"http://spaclient.org:8080/callback.html\",
+    \"response_type\": \"id_token token\",
+    \"scope\": \"openid profile product.read product.readwrite\",
+    \"state\": \"1156203512a04aca9c73ff2216e793f7\",
+    \"nonce\": \"e6e991d0a4b34ea88aabc08e8fe6ac0f\"
+  }
+}"
+2017-06-19 20:19:34.778 +02:00 [Verbose] ProcessInteractionAsync
+2017-06-19 20:19:34.780 +02:00 [Debug] "user_consent" grant with value: "http://spaclient.org:8080|2" not found in store.
+2017-06-19 20:19:34.782 +02:00 [Information] Showing consent: User has not yet consented
+2017-06-19 20:19:34.787 +02:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:19:34.789 +02:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-06-19 20:19:34.796 +02:00 [Information] Request finished in 74.656ms 302 
+2017-06-19 20:19:34.802 +02:00 [Information] Request starting HTTP/1.1 GET http://spaidsrv.org:8081/consent?returnUrl=%2Fconnect%2Fauthorize%2Fconsent%3Fclient_id%3Dhttp%253A%252F%252Fspaclient.org%253A8080%26redirect_uri%3Dhttp%253A%252F%252Fspaclient.org%253A8080%252Fcallback.html%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520product.read%2520product.readwrite%26state%3D1156203512a04aca9c73ff2216e793f7%26nonce%3De6e991d0a4b34ea88aabc08e8fe6ac0f  
+2017-06-19 20:19:34.809 +02:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "idsrv".
+2017-06-19 20:19:34.810 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.812 +02:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-06-19 20:19:34.823 +02:00 [Information] Executing action method "IdentityServer4.Quickstart.UI.ConsentController.Index (SpaIdSrv)" with arguments (["/connect/authorize/consent?client_id=http%3A%2F%2Fspaclient.org%3A8080&redirect_uri=http%3A%2F%2Fspaclient.org%3A8080%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile%20product.read%20product.readwrite&state=1156203512a04aca9c73ff2216e793f7&nonce=e6e991d0a4b34ea88aabc08e8fe6ac0f"]) - ModelState is Valid
+2017-06-19 20:19:34.832 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:19:34.838 +02:00 [Verbose] returnUrl is valid
+2017-06-19 20:19:34.840 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.842 +02:00 [Debug] Start authorize request protocol validation
+2017-06-19 20:19:34.848 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-06-19 20:19:34.851 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-06-19 20:19:34.855 +02:00 [Verbose] Authorize request protocol validation successful
+2017-06-19 20:19:34.857 +02:00 [Verbose] AuthorizationRequest being returned
+2017-06-19 20:19:34.859 +02:00 [Verbose] AuthorizationRequest being returned

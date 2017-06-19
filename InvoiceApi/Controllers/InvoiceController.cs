@@ -18,8 +18,9 @@ namespace InvoiceApi.Controllers
         public IActionResult Get()
         //public String Get()
         {
-          //  return "to be configured for Keycloak, see https://www.nuget.org/packages/Owin.Security.Keycloak";
-            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+            //  return "to be configured for Keycloak, see https://www.nuget.org/packages/Owin.Security.Keycloak";
+            var mail = User.Claims.Where(c => c.Type == System.Security.Claims.ClaimValueTypes.Email).Select(c => c.Value).SingleOrDefault();
+            return new JsonResult("Client has access to the invoice api, your mail is " + mail);
         }
     }
 }
