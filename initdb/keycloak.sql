@@ -3797,6 +3797,10 @@ INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http:
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080/callback.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080/index.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080');
+INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaconfagents.westeurope.cloudapp.azure.com:8080');
+INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaconfagents.westeurope.cloudapp.azure.com:8080/callback.html');
+INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaconfagents.westeurope.cloudapp.azure.com:8080/index.html');
+
 
 
 --

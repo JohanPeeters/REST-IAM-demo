@@ -1,0 +1,81 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:9.6.2-alpine
+    container_name: ${POSTGRES_NAME}
+    ports:
+      - "5432:5432"
+    environment:
+      KC_USER: ${KC_DB_OWNER}
+      KC_PASSWORD: ${KC_DB_OWNER_PWD}
+    volumes:
+      - initdb:/docker-entrypoint-initdb.d
+  keycloak:
+    build: ./keycloak
+    image: ${KC_TAG}
+    container_name: ${KC_NAME}
+    ports:
+      - "8443:8443"
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_PORT_5432_TCP_ADDR: ${POSTGRES_NAME}
+      POSTGRES_DATABASE: ${KC_DB}
+      POSTGRES_USER: ${KC_DB_OWNER}
+      POSTGRES_PASSWORD: ${KC_DB_OWNER_PWD}
+         
+  spaclient:
+    image: spaclient
+    build:
+      context: ./SpaClient
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+    ports:
+      - "8080:8080"
+
+  spaidsrv:
+    image: spaidsrv
+    build:
+      context: ./SpaIdSrv
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+    ports:
+      - "8081:8081"
+
+  #The productapi will be protected by identityserver
+  productapi:
+    image: productapi
+    build:
+      context: ./ProductApi
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT} 
+    ports:
+      - "8082:8082"
+    #link required because the productapi loads the openidconfiguration from idsrv
+    links:
+      - spaidsrv:spaidsrv.org
+      - spaidsrv:spaconfagents.westeurope.cloudapp.azure.com
+
+  #The invoiceapi will be protected by Keycloak
+  invoiceapi:
+    image: invoiceapi
+    build:
+      context: ./InvoiceApi
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT} 
+    ports:
+      - "8083:8083"
+    #link required because the invoiceapi loads the openidconfiguration from keycloak
+    links:
+      - keycloak:softwarewolves.org
+      - keycloak:spaconfagents.westeurope.cloudapp.azure.com
+volumes:
+  pg_data:
+  initdb:
+    driver: azurefile
+    driver_opts:
+      share: "initdb"  
