@@ -56,8 +56,7 @@ services:
       - "2086:2086"
     #link required because the productapi loads the openidconfiguration from idsrv
     links:
-      - spaidsrv:spaidsrv.org
-      - spaidsrv:spaconfagents.westeurope.cloudapp.azure.com
+      - spaidsrv:spaidsrv.softwarewolves.org
 
   #The invoiceapi will be protected by Keycloak
   invoiceapi:
@@ -71,8 +70,7 @@ services:
       - "2095:2095"
     #link required because the invoiceapi loads the openidconfiguration from keycloak
     links:
-      - keycloak:softwarewolves.org
-      - keycloak:spaconfagents.westeurope.cloudapp.azure.com
+      - keycloak:keycloak.softwarewolves.org
 volumes:
   pg_data:
   initdb:

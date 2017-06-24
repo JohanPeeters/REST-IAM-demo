@@ -4,7 +4,7 @@ This repository aims to build, run and test the target Docker images: iam-servic
 
 ## What should your hosts file look like ##
 #SPAConference
-127.0.0.1   softwarewolves.org
+127.0.0.1	keycloak.com
 127.0.0.1	spaclient.org
 127.0.0.1	spaidsrv.org
 127.0.0.1	productapi.org
