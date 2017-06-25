@@ -23,7 +23,7 @@ var mgr = makeRequest('GET', 'appsettings.json')
             client_id: parsedData.serverurls,
             redirect_uri: parsedData.serverurls + "/callback.html",
             response_type: "id_token token",
-            scope: "openid profile product.read product.readwrite",
+            scope: "openid email address profile product.read product.readwrite",
             post_logout_redirect_uri: parsedData.serverurls + "/index.html"
         };
         var mgr = new Oidc.UserManager(config);

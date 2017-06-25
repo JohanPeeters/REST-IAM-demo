@@ -31,6 +31,8 @@ namespace SpaIdSrv.Configuration
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.Address,
                         "product.read",
                         "product.readwrite",
                     }

@@ -47,6 +47,8 @@ namespace SpaIdSrv.Configuration
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Email(),
+                new IdentityResources.Address(),
             };
             }
         }
