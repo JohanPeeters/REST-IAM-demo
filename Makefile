@@ -44,7 +44,7 @@ run:
 	@docker-compose up -d --remove-orphans
 
 clean-run: rm-postgres
-	-@docker volume rm restiamdemo_pg_date
+	-@docker volume rm restiamdemo_pg_data
 	-@docker volume rm $(subst -,,$(ROOT_DIR))_pg_data
 	@docker-compose up -d --build --remove-orphans
 
