@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "REST-IAM demo (Local)",
-		"_postman_id": "1d6b0329-7571-17eb-f2fa-2c401a9ce4c0",
+		"_postman_id": "69d66df8-dcb6-f1a2-118b-557e079a5fc9",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -81,7 +81,7 @@
 				}
 			],
 			"request": {
-				"url": "http://spaidsrv.org:8081/connect/token",
+				"url": "http://spaidsrv.org:2052/connect/token",
 				"method": "POST",
 				"header": [
 					{
@@ -122,8 +122,7 @@
 						{
 							"key": "scope",
 							"value": "product.read",
-							"type": "text",
-							"enabled": true
+							"type": "text"
 						}
 					]
 				},
