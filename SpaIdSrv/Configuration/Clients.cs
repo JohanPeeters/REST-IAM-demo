@@ -22,6 +22,7 @@ namespace SpaIdSrv.Configuration
                     ClientName = "SPAClient",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
+                    AlwaysIncludeUserClaimsInIdToken = true,
 
                     RedirectUris =           { spaClientBaseUri + "/callback.html" },
                     PostLogoutRedirectUris = { spaClientBaseUri + "/index.html" },
