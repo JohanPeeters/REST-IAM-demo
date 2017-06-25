@@ -1,62 +1,62 @@
 # README #
 
-This repository aims to build, run and test the target Docker images: iam-service/keycloak, iam-service/apiman, iam-service/test-service and postgres locally. Its Makefile makes this very easy, as well as deploying these artefacts to AWS.
+In this repository, we share REST access control experiments. It contains 2 Identity Providers (IdP), one using KeyCloak (`keycloak`), the other IdentityServer4 (`SpaIdSrv`). There are also 2 REST services, `InvoiceApi` and `ProductApi`, that require a JWT token signed by the respective IdPs prior to giving access. Finally, a JavaScript client, `SpaClient`, obtains these tokens and calls the APIs.
 
-## What should your hosts file look like ##
-#SPAConference
-127.0.0.1	keycloak.com
-127.0.0.1	spaclient.org
-127.0.0.1	spaidsrv.org
-127.0.0.1	productapi.org
-127.0.0.1	invoiceapi.org
+The first 4 components each run in their own Docker container, the latter is served by a Docker container and runs in a browser.
 
-## What is this repository for? ##
+## How to use ##
 
-This repo contains
-* docker-compose.yml: intended to bring up all the containers in the IAM project
-* Makefile: to build and run the IAM target containers
-* README.md: this file
-* test: a directory for the acceptance tests
-* package.json: defines the dependencies for the acceptance tests.
+### Prerequisites ###
 
-## How do I get set up? ##
-
-In order to build and run the system locally, or to be able to deploy to AWS, you also need to install the following:
+In order to build and run the system locally, the following need to be installed:
 * Docker
 * make
-* Java 8
-* jq
-* ssh
 
-For reasons explained further below, you need to make sure that the `/etc/hosts` file resolves to `localhost` for `softwarewolves.org`. An easy way to do so is to run the following command
+and the `/etc/hosts` file should contain the following section:
 
-    sudo sh -c "echo '127.0.0.1    softwarewolves.org' >> /etc/hosts"    
+    127.0.0.1	keycloak.com
+    127.0.0.1	spaclient.org
+    127.0.0.1	spaidsrv.org
+    127.0.0.1	productapi.org
+    127.0.0.1	invoiceapi.org
 
-For the first run, you call `make clean-run`. This
-* builds the test service
-* downloads base Docker images for apiman, KeyCloak and the test service
-* builds new apiman, KeyCloak and test service Docker images
-* starts up containers using these images, as well as a PostgreSQL container.
+You will probably also want to install Postman.
 
-All this takes quite some time - perhaps half an hour or so. Fortunately, subsequent runs will not take quite so long since Docker images have been downloaded and built. In fact, after the first run, you will usually do `make run` to start the containers, with a typical start-up time of a couple of minutes.
+### Running the demo locally ###
 
-In order to run the tests, you need Node. Also recommended are
-* Postman
-* PostgreSQL (actually the psql client is all you need, but it is probably easier to install the entire RDBMS)
+Execute `make run` in the repo root. This
+* downloads base Docker images
+* extends them
+* starts up containers, as well as a PostgreSQL container used by KeyCloak to store its users and configuration.
 
-Sometimes you may want to start services individually in an otherwise functioning configuration. You can do so with the command `docker-compose up <service name>`. If you want to override the default entrypoint, you can use `docker-compose run --entrypoint <cmd> <service>`. For example, starting the KeyCloak docker container without the KeyCloak server can be done with `docker-compose run --entrypoint bash keycloak`.
+All this takes quite some time - perhaps half an hour or so. Fortunately, subsequent runs do not take nearly so long since Docker images have been downloaded and built. Typically start-up time of subsequent runs is a couple of minutes.
 
-If you want to change the KeyCloak initial configuration, you can do so by starting a pristine system with `make run`, making the desired configuration changes in the KeyCloak administrative console and then executing `make persist-kc-config`. The configuration is currently in `initdb/keycloak.sql`. Persisting the configuration can also be done with the  command `make persist-config`.
+Use `make clean-run` when pulling a new version.
+
+### Things to try ###
+
+* With Postman, security tokens can be retrieved from KeyCloak and IdentityServer with the requests in `REST-IAM demo (Local).postman_collection.json`.
+* Browse to the SPA client running locally at http://spaclient.org:8080 and try calling the resource servers with and without logging into IdentityServer or KeyCloak.
+
+## Repo structure ##
+
+This repo contains
+* docker-compose.yml: to bring up containers locally
+* docker-compose_azure.yml: to bring up containers on Azure
+* Makefile: to build and run the containers
+* README.md: this file
+* SpaIdSrv: STS built with IdentityServer4
+* keycloak: KeyCloak customized
+* initdb: KeyCloak configuration
+* ProductApi: resource server
+* InvoiceApi: resource server
+* SpaClient: Single Page Application, client of the resource servers
 
 ## Contribution guidelines ##
 
-Do not commit code unless it passes the e2e tests. Except for `README.md` and `.gitignore`, everything in the repo is considered as code.
+If you want to contribute, we suggest you first create an issue so we can discuss your contribution.
 
-## Writing tests ##
+## Troubleshooting ##
 
-End-to-end acceptance tests for the IAM project are written in Chakram. See the `test` directory.
-
-## Who do I talk to? ##
-
-* Repo owner or admin: yo@johanpeeters.com
-* Other community or team contact
+##### After logging in with one of the IdPs, I get a blank page after the redirect to the SPA #####
+This sometimes happens when the IdP issues tokens that have expired according to the clock of the client. This is arguably a bug - there should be a nice error message. Anyway, this happens because Docker Engine does not keep its clock in sync with the host, so after running Docker for a long time, it typically has drifted significantly. The solution is to restart Docker, restart the containers and try again.
