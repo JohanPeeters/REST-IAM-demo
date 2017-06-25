@@ -3,3 +3,4 @@ bin/
 obj/
 .vs
 ./SpaIdSrv/identityserver4_log.txt
+*.user
