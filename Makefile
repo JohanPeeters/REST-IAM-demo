@@ -16,7 +16,7 @@ endef
 
 verify:
 	$(info Testing of necessary name resolutions using hostfile for local testing)
-	$(call resolvesToLocal,softwarewolves.org)
+	$(call resolvesToLocal,keycloak.com)
 	$(call resolvesToLocal,spaidsrv.org)
 	$(call resolvesToLocal,spaclient.org)
 	$(call resolvesToLocal,productapi.org)
@@ -24,9 +24,6 @@ verify:
 
 stop:
 	@docker-compose stop
-
-obsoletespa:
-	@cd client && webpack && webpack-dev-server
 
 rm: stop
 	@docker-compose rm -f
@@ -40,10 +37,10 @@ rm-postgres: stop-postgres
 build:
 	@docker-compose build
 
-run:
+run: verify
 	@docker-compose up -d --remove-orphans
 
-clean-run: rm-postgres
+clean-run: verify rm-postgres
 	-@docker volume rm restiamdemo_pg_data
 	-@docker volume rm $(subst -,,$(ROOT_DIR))_pg_data
 	@docker-compose up -d --build --remove-orphans
