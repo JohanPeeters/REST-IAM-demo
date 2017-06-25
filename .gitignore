@@ -2,5 +2,5 @@ node_modules/
 bin/
 obj/
 .vs
-./SpaIdSrv/identityserver4_log.txt
+identityserver4_log.txt
 *.user

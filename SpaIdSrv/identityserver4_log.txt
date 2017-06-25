@@ -1,4 +1,0 @@
-2017-06-25 09:36:23.627 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
-2017-06-25 09:36:23.688 +02:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
-2017-06-25 09:36:23.694 +02:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
-2017-06-25 09:36:24.048 +02:00 [Information] User profile is available. Using '"C:\Users\Michael\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
