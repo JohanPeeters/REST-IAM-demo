@@ -54,14 +54,3 @@ persist-kc-config:
 	 pg_dump --clean --if-exists --create --inserts -U $(KC_DB_OWNER) $(KC_DB) >> ./initdb/keycloak.sql
 
 persist-config: persist-kc-config
-
-node_modules: package.json
-	@yarn install
-
-test: node_modules
-	@npm test
-
-aws-db-init:
-	$(info Initialises the database)
-	@@ssh -f -o ExitOnForwardFailure=yes -L 3333:keycloak.c7y3d9msb0fs.eu-west-1.rds.amazonaws.com:5432 ec2-user@ec2-52-17-178-55.eu-west-1.compute.amazonaws.com sleep 10
-	$(call import_file,./initdb/keycloak.sql,$(KC_DB_OWNER),$(KC_DB_OWNER_PWD))
