@@ -1707,6 +1707,7 @@ INSERT INTO client VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', true, false, 
 INSERT INTO client VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, false, 'account', 0, false, 'e92a3264-9841-43a8-914d-8a4b87cc1434', '/auth/realms/Colruyt/account', false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, false, 'colruytApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
 INSERT INTO client VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', true, true, 'genericSPA', 0, true, 'a7306044-b84c-4a9f-8c9e-808add02a8bb', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', '', NULL, NULL, false, true, false, NULL, false, false, false);
+INSERT INTO client VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', true, true, 'invoiceApi', 0, true, '5809a29e-98f4-4f15-8994-e066598c1515', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
 
 
 --
@@ -2460,6 +2461,9 @@ INSERT INTO keycloak_role VALUES ('eb8c248a-0e0f-43eb-ac3d-0fade93c091f', 'd19d2
 INSERT INTO keycloak_role VALUES ('1f117d24-bb03-4b10-b319-e6c1e1a2cde5', 'ab721dba-4af4-4d1d-b686-aec44d62d883', true, NULL, 'manage-account-links', 'Aldi', 'ab721dba-4af4-4d1d-b686-aec44d62d883', NULL, false);
 INSERT INTO keycloak_role VALUES ('426fd4f3-83bf-499f-b7b9-223a76846317', '4dd5f99f-18cf-4f4f-ad84-bb6a0f566d15', true, NULL, 'manage-account-links', 'fa758415-6fe8-4313-b599-643292361e3d', '4dd5f99f-18cf-4f4f-ad84-bb6a0f566d15', NULL, false);
 INSERT INTO keycloak_role VALUES ('99742840-92ca-4b33-894e-dc29354e6ef2', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, NULL, 'manage-account-links', 'Colruyt', '8bc6a229-9e1d-4a74-8933-8fb0abf50fde', NULL, false);
+INSERT INTO keycloak_role VALUES ('733e3d51-65c6-45c0-a994-2e454bab956f', '809a921a-3a19-45e9-856c-74d9d4464481', true, NULL, 'accountant', 'Colruyt', '809a921a-3a19-45e9-856c-74d9d4464481', NULL, false);
+INSERT INTO keycloak_role VALUES ('2544cbab-6150-4e6d-820e-78035c945569', '809a921a-3a19-45e9-856c-74d9d4464481', true, NULL, 'supplier', 'Colruyt', '809a921a-3a19-45e9-856c-74d9d4464481', NULL, false);
+INSERT INTO keycloak_role VALUES ('ee2d8b82-c7dd-483b-8c95-3b411c9492d8', '505e6b3f-1884-4b26-a68a-0635ff513fad', true, NULL, 'tester', 'Colruyt', '505e6b3f-1884-4b26-a68a-0635ff513fad', NULL, false);
 
 
 --
@@ -2683,6 +2687,12 @@ INSERT INTO protocol_mapper VALUES ('79107f72-4f09-4e84-9f81-93921ae68b47', 'ema
 INSERT INTO protocol_mapper VALUES ('b57c4a74-9de4-4a21-ae0d-e0afe6fc79f1', 'given name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${givenName}', 'bff007b9-929d-41c2-b35e-c0a5e4deb1c9', NULL);
 INSERT INTO protocol_mapper VALUES ('b96c3930-7457-4fe7-93e3-6203fe9fb61e', 'family name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${familyName}', 'bff007b9-929d-41c2-b35e-c0a5e4deb1c9', NULL);
 INSERT INTO protocol_mapper VALUES ('5d3321b4-6023-4b52-a994-52d5c29f32d9', 'full name', 'openid-connect', 'oidc-full-name-mapper', true, '${fullName}', 'bff007b9-929d-41c2-b35e-c0a5e4deb1c9', NULL);
+INSERT INTO protocol_mapper VALUES ('f5e8e6cb-04cb-4dfd-9f2d-d7c2181f90e2', 'role list', 'saml', 'saml-role-list-mapper', false, NULL, '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
+INSERT INTO protocol_mapper VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'username', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${username}', '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
+INSERT INTO protocol_mapper VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'email', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${email}', '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
+INSERT INTO protocol_mapper VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'given name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${givenName}', '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
+INSERT INTO protocol_mapper VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'family name', 'openid-connect', 'oidc-usermodel-property-mapper', true, '${familyName}', '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
+INSERT INTO protocol_mapper VALUES ('de099912-05da-47e9-9fca-4630d99aa043', 'full name', 'openid-connect', 'oidc-full-name-mapper', true, '${fullName}', '809a921a-3a19-45e9-856c-74d9d4464481', NULL);
 
 
 --
@@ -3634,6 +3644,35 @@ INSERT INTO protocol_mapper_config VALUES ('b96c3930-7457-4fe7-93e3-6203fe9fb61e
 INSERT INTO protocol_mapper_config VALUES ('b96c3930-7457-4fe7-93e3-6203fe9fb61e', 'String', 'jsonType.label');
 INSERT INTO protocol_mapper_config VALUES ('5d3321b4-6023-4b52-a994-52d5c29f32d9', 'true', 'id.token.claim');
 INSERT INTO protocol_mapper_config VALUES ('5d3321b4-6023-4b52-a994-52d5c29f32d9', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('f5e8e6cb-04cb-4dfd-9f2d-d7c2181f90e2', 'false', 'single');
+INSERT INTO protocol_mapper_config VALUES ('f5e8e6cb-04cb-4dfd-9f2d-d7c2181f90e2', 'Basic', 'attribute.nameformat');
+INSERT INTO protocol_mapper_config VALUES ('f5e8e6cb-04cb-4dfd-9f2d-d7c2181f90e2', 'Role', 'attribute.name');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'username', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'preferred_username', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('b350523e-2f11-4b20-a0db-807dee1e9b43', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'email', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'email', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('ca7f79ae-d135-4b67-adf5-1fade04f896b', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'firstName', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'given_name', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('c5274170-d8ef-42dd-9346-bcd97cf3c801', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'true', 'userinfo.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'lastName', 'user.attribute');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'true', 'access.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'family_name', 'claim.name');
+INSERT INTO protocol_mapper_config VALUES ('5a5d5955-4b93-46e9-a14b-236da9febe1e', 'String', 'jsonType.label');
+INSERT INTO protocol_mapper_config VALUES ('de099912-05da-47e9-9fca-4630d99aa043', 'true', 'id.token.claim');
+INSERT INTO protocol_mapper_config VALUES ('de099912-05da-47e9-9fca-4630d99aa043', 'true', 'access.token.claim');
 
 
 --
@@ -3800,7 +3839,6 @@ INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http:
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080/callback.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080/index.html');
-
 
 
 --
@@ -4022,6 +4060,8 @@ INSERT INTO user_role_mapping VALUES ('5ebaf50f-278f-4caa-bf2a-a6483ed909c0', 'a
 INSERT INTO user_role_mapping VALUES ('af5f4188-9dbd-49b0-bfb2-ffabb9652c79', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
 INSERT INTO user_role_mapping VALUES ('169ae6bd-87e6-4112-8411-b858eb5bcb35', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
 INSERT INTO user_role_mapping VALUES ('d26a5067-239f-4c4f-979b-02d617de32af', 'ab69c819-d744-406e-8a0f-ccc7db99fc98');
+INSERT INTO user_role_mapping VALUES ('ee2d8b82-c7dd-483b-8c95-3b411c9492d8', '016c5d30-ab12-42f2-ba9e-0b3efe81df4a');
+INSERT INTO user_role_mapping VALUES ('733e3d51-65c6-45c0-a994-2e454bab956f', '016c5d30-ab12-42f2-ba9e-0b3efe81df4a');
 
 
 --
