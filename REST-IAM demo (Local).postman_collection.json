@@ -1,134 +1,193 @@
 {
-	"variables": [],
-	"info": {
-		"name": "REST-IAM demo (Local)",
-		"_postman_id": "69d66df8-dcb6-f1a2-118b-557e079a5fc9",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-	},
-	"item": [
+	"id": "fa488fdd-6569-5185-8227-7cd31eb49b5e",
+	"name": "REST-IAM demo (Local)",
+	"description": "",
+	"order": [
+		"40efc503-aa64-8b45-c830-cce083fcf85f",
+		"e0aecf62-c2d3-7f62-5ecf-10425bc89383",
+		"40a32d6f-4c30-c163-498c-a175324a23c8"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"requests": [
 		{
-			"name": "Colruyt owner requests an access and ID token",
-			"event": [
+			"id": "40a32d6f-4c30-c163-498c-a175324a23c8",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
 				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
-						]
-					}
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
 				}
 			],
-			"request": {
-				"url": "https://localhost:8443/auth/realms/Colruyt/protocol/openid-connect/token",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "odette owner",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "this is more than 20 characters",
-							"type": "text"
-						},
-						{
-							"key": "grant_type",
-							"value": "password",
-							"type": "text"
-						},
-						{
-							"key": "client_id",
-							"value": "colruytApplication",
-							"type": "text"
-						},
-						{
-							"key": "client_secret",
-							"value": "9a1fa4b9-eda1-493d-8bb8-246580b865a3",
-							"description": "",
-							"type": "text"
-						}
-					]
+			"url": "http://spaidsrv.org:2052/connect/token",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "johan",
+					"type": "text"
 				},
-				"description": ""
-			},
-			"response": []
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "postman",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "secret",
+					"description": "",
+					"type": "text"
+				},
+				{
+					"key": "scope",
+					"value": "product.read",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498393362970,
+			"name": "Client credentials: request an access and ID token from IdentityServer copy",
+			"description": "",
+			"collectionId": "fa488fdd-6569-5185-8227-7cd31eb49b5e",
+			"responses": []
 		},
 		{
-			"name": "request an access and ID token from IdentityServer",
-			"event": [
+			"id": "40efc503-aa64-8b45-c830-cce083fcf85f",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
 				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
-						]
-					}
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
 				}
 			],
-			"request": {
-				"url": "http://spaidsrv.org:2052/connect/token",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "johan",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "password",
-							"type": "text"
-						},
-						{
-							"key": "grant_type",
-							"value": "password",
-							"type": "text"
-						},
-						{
-							"key": "client_id",
-							"value": "postman",
-							"type": "text"
-						},
-						{
-							"key": "client_secret",
-							"value": "secret",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "scope",
-							"value": "product.read",
-							"type": "text"
-						}
-					]
+			"url": "https://keycloak.com:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "odette owner",
+					"type": "text"
 				},
-				"description": ""
-			},
-			"response": []
+				{
+					"key": "password",
+					"value": "this is more than 20 characters",
+					"type": "text"
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "colruytApplication",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "9a1fa4b9-eda1-493d-8bb8-246580b865a3",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498393351745,
+			"name": "Colruyt owner requests an access and ID token",
+			"description": "",
+			"collectionId": "fa488fdd-6569-5185-8227-7cd31eb49b5e",
+			"responses": []
+		},
+		{
+			"id": "e0aecf62-c2d3-7f62-5ecf-10425bc89383",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://spaidsrv.org:2052/connect/token",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "johan",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "postman",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "secret",
+					"description": "",
+					"type": "text"
+				},
+				{
+					"key": "scope",
+					"value": "product.read",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498393362970,
+			"name": "Resource owner: request an access and ID token from IdentityServer",
+			"description": "",
+			"collectionId": "fa488fdd-6569-5185-8227-7cd31eb49b5e",
+			"responses": []
 		}
 	]
 }
