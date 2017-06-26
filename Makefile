@@ -37,10 +37,10 @@ rm-postgres: stop-postgres
 build:
 	@docker-compose build
 
-run: verify
+run: 
 	@docker-compose up -d --remove-orphans
 
-clean-run: verify rm-postgres
+clean-run:  rm-postgres
 	-@docker volume rm restiamdemo_pg_data
 	-@docker volume rm $(subst -,,$(ROOT_DIR))_pg_data
 	@docker-compose up -d --build --remove-orphans
