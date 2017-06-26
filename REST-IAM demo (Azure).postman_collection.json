@@ -22,7 +22,7 @@
 				}
 			],
 			"request": {
-				"url": "https://keycloak.softwarewolves.org:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+				"url": "https://spaconfagents.westeurope.cloudapp.azure.com:8443/auth/realms/Colruyt/protocol/openid-connect/token",
 				"method": "POST",
 				"header": [
 					{
