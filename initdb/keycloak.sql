@@ -1705,9 +1705,9 @@ INSERT INTO client VALUES ('f8692af8-3bed-4a28-891d-0b2e5de5e9a0', true, false, 
 INSERT INTO client VALUES ('102112b4-0529-46c4-afc3-5dded7a42ff9', true, true, 'Colruyt-realm', 0, false, 'c1c23e2d-af1a-4185-90a7-a1ed63e4869c', NULL, true, NULL, false, 'master', NULL, 0, false, false, 'Colruyt Realm', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', true, false, 'security-admin-console', 0, true, '1e7712f0-c2bb-46db-978d-76e12dcf5b11', '/auth/admin/Colruyt/console/index.html', false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_security-admin-console}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
 INSERT INTO client VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', true, false, 'account', 0, false, 'e92a3264-9841-43a8-914d-8a4b87cc1434', '/auth/realms/Colruyt/account', false, NULL, false, 'Colruyt', NULL, 0, false, false, '${client_account}', false, 'client-secret', NULL, NULL, NULL, true, false, false, NULL, false, false, false);
-INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, false, 'colruytApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
 INSERT INTO client VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', true, true, 'genericSPA', 0, true, 'a7306044-b84c-4a9f-8c9e-808add02a8bb', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', '', NULL, NULL, false, true, false, NULL, false, false, false);
-INSERT INTO client VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', true, true, 'invoiceApi', 0, true, '5809a29e-98f4-4f15-8994-e066598c1515', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', true, true, 'invoiceApi', 0, false, '5809a29e-98f4-4f15-8994-e066598c1515', NULL, true, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
+INSERT INTO client VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', true, true, 'colruytApplication', 0, true, '9a1fa4b9-eda1-493d-8bb8-246580b865a3', NULL, false, NULL, false, 'Colruyt', 'openid-connect', -1, false, false, NULL, false, 'client-secret', NULL, NULL, NULL, true, false, true, NULL, false, false, false);
 
 
 --
@@ -1771,6 +1771,16 @@ INSERT INTO client_attributes VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'f
 INSERT INTO client_attributes VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'false', 'saml.server.signature');
 INSERT INTO client_attributes VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'false', 'saml.server.signature.keyinfo.ext');
 INSERT INTO client_attributes VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'false', 'saml.onetimeuse.condition');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.assertion.signature');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.multivalued.roles');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.force.post.binding');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.encrypt');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml_force_name_id_format');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.client.signature');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.authnstatement');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.server.signature');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.server.signature.keyinfo.ext');
+INSERT INTO client_attributes VALUES ('809a921a-3a19-45e9-856c-74d9d4464481', 'false', 'saml.onetimeuse.condition');
 
 
 --
@@ -3831,14 +3841,14 @@ INSERT INTO redirect_uris VALUES ('8210d5e2-cc3c-4eb6-be99-3a32667a378a', '/auth
 INSERT INTO redirect_uris VALUES ('ab721dba-4af4-4d1d-b686-aec44d62d883', '/auth/realms/Aldi/account/*');
 INSERT INTO redirect_uris VALUES ('3364267c-1dd3-4fdf-b323-2d05bf18beb5', '/auth/admin/Colruyt/console/*');
 INSERT INTO redirect_uris VALUES ('8bc6a229-9e1d-4a74-8933-8fb0abf50fde', '/auth/realms/Colruyt/account/*');
-INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://spa:4200/*');
-INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://localhost:4200/*');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080/callback.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080/index.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.org:8080');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080/callback.html');
 INSERT INTO redirect_uris VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', 'http://spaclient.softwarewolves.org:8080/index.html');
+INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://spa:4200/*');
+INSERT INTO redirect_uris VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://localhost:4200/*');
 
 
 --
@@ -4090,9 +4100,9 @@ INSERT INTO web_origins VALUES ('3b1e3885-0b42-4569-84c7-dc7f2dd7183b', 'https:/
 INSERT INTO web_origins VALUES ('3b1e3885-0b42-4569-84c7-dc7f2dd7183b', 'https://ec2-34-248-65-114.eu-west-1.compute.amazonaws.com:8444');
 INSERT INTO web_origins VALUES ('11afe0d4-0779-410a-a962-f9c50bd3122f', '*');
 INSERT INTO web_origins VALUES ('fd470925-9bc4-46ab-8e4b-e09094ba3c53', '*');
+INSERT INTO web_origins VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', '+');
 INSERT INTO web_origins VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://spa:4200');
 INSERT INTO web_origins VALUES ('505e6b3f-1884-4b26-a68a-0635ff513fad', 'http://localhost:4200');
-INSERT INTO web_origins VALUES ('bff007b9-929d-41c2-b35e-c0a5e4deb1c9', '+');
 
 
 --
