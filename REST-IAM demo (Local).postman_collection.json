@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "user requests a token from KeyCloak",
+			"name": "Resource Owner Password to KeyCloak",
 			"event": [
 				{
 					"listen": "test",
@@ -67,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "user requests a token from IdentityServer",
+			"name": "Resource Owner Password to IdentityServer",
 			"event": [
 				{
 					"listen": "test",
@@ -131,7 +131,7 @@
 			"response": []
 		},
 		{
-			"name": "client credentials grant to IdentityServer",
+			"name": "Client Credentials to IdentityServer",
 			"event": [
 				{
 					"listen": "test",

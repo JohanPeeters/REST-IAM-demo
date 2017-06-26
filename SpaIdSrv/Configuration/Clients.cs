@@ -38,13 +38,27 @@ namespace SpaIdSrv.Configuration
                         "product.readwrite",
                     }
                 },
-                // Postman
+                // Postman resource owner flow
                 new Client
 
                 {
                     ClientId = "postman",
                     ClientName = "postman",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientSecrets =
+                    {
+                      new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = { "product.read" }
+                },
+
+                // Postman client credentials
+                new Client
+
+                {
+                    ClientId = "postmanclientgrant",
+                    ClientName = "postmanclientgrant",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets =
                     {
                       new Secret("secret".Sha256())
