@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "Colruyt owner requests an access and ID token",
+			"name": "user requests a token from KeyCloak",
 			"event": [
 				{
 					"listen": "test",
@@ -22,7 +22,7 @@
 				}
 			],
 			"request": {
-				"url": "https://localhost:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+				"url": "https://keycloak.com:8443/auth/realms/Colruyt/protocol/openid-connect/token",
 				"method": "POST",
 				"header": [
 					{
@@ -67,7 +67,71 @@
 			"response": []
 		},
 		{
-			"name": "request an access and ID token from IdentityServer",
+			"name": "user requests a token from IdentityServer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://spaidsrv.org:2052/connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "johan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "postman",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "product.read",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "client credentials grant to IdentityServer",
 			"event": [
 				{
 					"listen": "test",
