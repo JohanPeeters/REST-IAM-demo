@@ -1,0 +1,198 @@
+{
+	"variables": [],
+	"info": {
+		"name": "REST-IAM demo (Azure)",
+		"_postman_id": "69d66df8-dcb6-f1a2-118b-557e079a5fc9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Resource Owner Password to KeyCloak",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://spaconfagents.westeurope.cloudapp.azure.com:8443/auth/realms/Colruyt/protocol/openid-connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "odette owner",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "this is more than 20 characters",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "colruytApplication",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "9a1fa4b9-eda1-493d-8bb8-246580b865a3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Resource Owner Password to IdentityServer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://spaidsrv.softwarewolves.org:2052/connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "johan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "postman",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "product.read",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Client Credentials to IdentityServer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://spaidsrv.softwarewolves.org:2052/connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "johan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "postman",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "product.read",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

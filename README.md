@@ -58,5 +58,13 @@ If you want to contribute, we suggest you first create an issue so we can discus
 
 ## Troubleshooting ##
 
+##### When connecting to the KeyCloak console, the browser issues a warning that the connection is insecure #####
+
+Our bad. We were lazy and configured KeyCloak with a self-signed X.509 certificate. So, in this case, we recommend you 'click through' and connect to the site anyway. You may catch us preaching against such sloppy practices at other times, but there you are, for now, this will have to do.
+
+##### Postman says it cannot connect to the local KeyCloak instance #####
+
+Obviously, the first port of call is to check whether the KeyCloak container is running: `docker ps`. If so, you may need to configure Postman to accept self-signed certificates. Preferences -> Certificates.
+
 ##### After logging in with one of the IdPs, I get a blank page after the redirect to the SPA #####
 This sometimes happens when the IdP issues tokens that have expired according to the clock of the client. This is arguably a bug - there should be a nice error message. Anyway, this happens because Docker Engine does not keep its clock in sync with the host, so after running Docker for a long time, it typically has drifted significantly. The solution is to restart Docker, restart the containers and try again.
